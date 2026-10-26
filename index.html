@@ -1,0 +1,1529 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>たすかるエアコンお掃除専門店｜エアコンクリーニング</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-soft:#f2f8fc;
+    --surface:#ffffff;
+    --surface-2:#eaf4fa;
+    --ink:#14313f;
+    --ink-soft:#4d6672;
+    --line:#dcebf3;
+    --brand:#0a74c9;
+    --brand-deep:#065a9e;
+    --brand-navy:#0b3a5c;
+    --brand-soft:#e6f3fb;
+    --accent:#f5a623;
+    --accent-soft:#fdf3da;
+    --accent-ink:#7a4d00;
+    --cta:#0aa06e;
+    --cta-deep:#07855a;
+    --cta-soft:#e8f7f1;
+    --star:#f5a623;
+    --shadow:0 10px 34px rgba(11,58,92,.10);
+    --shadow-sm:0 3px 14px rgba(11,58,92,.08);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1a24;
+      --bg-soft:#0e2231;
+      --surface:#122a3a;
+      --surface-2:#17364a;
+      --ink:#eaf4f9;
+      --ink-soft:#a9c3d0;
+      --line:#23465c;
+      --brand:#3aa7e8;
+      --brand-deep:#7cc6f5;
+      --brand-navy:#0a2c46;
+      --brand-soft:#16374d;
+      --accent:#f5b544;
+      --accent-soft:#3d2f10;
+      --accent-ink:#ffd98a;
+      --cta:#17b57f;
+      --cta-deep:#2ecb97;
+      --cta-soft:#12362a;
+      --shadow:0 10px 34px rgba(0,0,0,.4);
+      --shadow-sm:0 3px 14px rgba(0,0,0,.3);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+    line-height:1.8;font-size:16px;
+    padding-bottom:84px;
+  }
+  @media (min-width:900px){ body{padding-bottom:0} }
+  h1,h2,h3,.gothic{font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif}
+  img{max-width:100%;display:block}
+  a{color:var(--brand)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:var(--surface);border-bottom:1px solid var(--line);
+  }
+  .header-in{display:flex;align-items:center;gap:12px;padding:10px 0}
+  .logo{display:inline-flex;align-items:center;text-decoration:none;background:#fff;border-radius:10px;padding:5px 10px;box-shadow:var(--shadow-sm);flex:0 0 auto}
+  .logo img{height:36px;width:auto;display:block}
+  @media (min-width:900px){ .logo img{height:44px} }
+  .header-tel{
+    margin-left:auto;display:inline-flex;align-items:center;gap:7px;
+    background:var(--surface);color:var(--cta-deep);text-decoration:none;font-weight:900;
+    padding:8px 14px;border:2px solid var(--cta);border-radius:999px;font-size:14.5px;white-space:nowrap;
+  }
+  .header-tel:hover{background:var(--cta-soft)}
+  .header-tel svg{flex:0 0 auto}
+  nav.pagenav{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+  .pagenav-in{display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;align-items:center}
+  .pagenav button{
+    font:inherit;font-weight:700;font-size:13.5px;cursor:pointer;
+    border:1px solid var(--brand);color:var(--brand-deep);
+    background:var(--surface);border-radius:999px;padding:6px 15px;white-space:nowrap;
+  }
+  .pagenav button[aria-current="page"]{background:var(--brand);color:#fff}
+  .proto-chip{
+    margin-left:auto;font-size:11px;font-weight:700;color:var(--accent-ink);
+    border:1px dashed var(--accent);border-radius:999px;padding:4px 10px;white-space:nowrap;align-self:center;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;background:var(--brand-navy)}
+  .hero .hero-img{width:100%;height:clamp(320px,74vw,540px);object-fit:cover;object-position:center 30%}
+  .hero-shade{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(7,38,64,.18) 0%,rgba(7,38,64,0) 34%,rgba(7,38,64,.55) 68%,rgba(7,38,64,.88) 100%);
+  }
+  .hero-content{
+    position:absolute;left:0;right:0;bottom:0;color:#fff;
+    padding:0 0 26px;
+  }
+  .hero-content .area-line{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.04em;
+    background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.45);
+    border-radius:999px;padding:4px 13px;margin:0 0 12px;backdrop-filter:blur(2px);
+  }
+  .hero-content h1{
+    margin:0 0 10px;font-size:29px;line-height:1.42;font-weight:900;
+    text-shadow:0 2px 14px rgba(0,0,0,.35);
+  }
+  @media (min-width:900px){ .hero-content h1{font-size:42px} }
+  .hero-content h1 .hl{color:#ffd35c}
+  .hero-content .sub{margin:0;font-size:14.5px;line-height:1.7;opacity:.96;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  @media (min-width:900px){ .hero-content .sub{font-size:16px} }
+
+  .hero-panel{position:relative;margin:-6px auto 0;max-width:1080px;padding:14px 20px 0}
+  .trust-row{
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;
+  }
+  .trust{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);padding:13px 8px 11px;text-align:center;
+  }
+  .trust .t-num{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.25;color:var(--brand-deep)}
+  @media (min-width:900px){ .trust .t-num{font-size:26px} }
+  .trust .t-num .stars{color:var(--star);font-size:15px;letter-spacing:1px;display:block}
+  @media (min-width:900px){ .trust .t-num .stars{font-size:18px} }
+  .trust .t-num.price{color:var(--accent-ink)}
+  .trust .t-label{font-size:11.5px;font-weight:700;color:var(--ink-soft);line-height:1.5}
+  .trust-note{font-size:11.5px;color:var(--ink-soft);margin:-6px 2px 14px}
+  .cta-row{display:flex;flex-direction:row;gap:10px}
+  @media (max-width:639px){
+    .cta-row .btn-form,.cta-row .btn-call{padding:13px 8px;font-size:14.5px}
+    .cta-row .btn-form small,.cta-row .btn-call small{display:none}
+  }
+  .btn-form,.btn-call{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:10px;
+    text-decoration:none;font-weight:900;border-radius:14px;padding:15px 18px;text-align:center;
+  }
+  .btn-form .bf-in,.btn-call .bf-in{line-height:1.3}
+  .btn-form small,.btn-call small{display:block;font-size:11.5px;font-weight:700;opacity:.92}
+  .btn-form{
+    background:var(--brand);color:#fff;font-size:17px;
+    border:2px solid var(--brand);box-shadow:0 6px 18px rgba(10,116,201,.32);
+  }
+  .btn-form:hover{background:var(--brand-deep);border-color:var(--brand-deep)}
+  .btn-call{
+    background:var(--surface);color:var(--cta-deep);font-size:16px;
+    border:2px solid var(--cta);box-shadow:var(--shadow-sm);
+  }
+  .btn-call:hover{background:var(--cta-soft)}
+
+  /* ---------- sections ---------- */
+  section.block{padding:64px 0 8px}
+  section.block.soft{background:var(--bg-soft);margin-top:56px;padding:56px 0 52px}
+  .sec-head{text-align:center;margin-bottom:36px}
+  .sec-head .kicker{
+    display:inline-flex;align-items:center;gap:7px;margin:0 0 14px;
+    background:var(--brand-soft);color:var(--brand-deep);
+    font-size:12.5px;font-weight:900;letter-spacing:.07em;line-height:1;
+    padding:7px 14px;border-radius:999px;
+  }
+  .sec-head .kicker svg{color:var(--brand);flex:0 0 auto}
+  .sec-head h2{font-size:25px;font-weight:900;margin:0;line-height:1.45}
+  @media (min-width:900px){ .sec-head h2{font-size:32px} }
+  .sec-head .bar{width:52px;height:4px;border-radius:2px;background:var(--brand);margin:14px auto 12px}
+  .sec-head p{margin:0 auto;color:var(--ink-soft);font-size:14.5px;max-width:640px}
+
+  /* points */
+  .points{display:grid;grid-template-columns:1fr;gap:14px}
+  @media (min-width:640px){ .points{grid-template-columns:1fr 1fr} }
+  @media (min-width:960px){ .points{grid-template-columns:1fr 1fr 1fr} }
+  .point{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;box-shadow:var(--shadow-sm);
+  }
+  .point .ic{
+    width:50px;height:50px;border-radius:14px;background:var(--brand-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--brand);margin-bottom:14px;
+  }
+  .point h3{margin:0 0 6px;font-size:17px;font-weight:900}
+  .point p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.75}
+  .point .p-img{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:10px;margin:0 0 16px;display:block}
+
+  /* before-after */
+  .ba-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media (min-width:760px){ .ba-grid{grid-template-columns:1fr 1fr} }
+  .ba-fig{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
+  .ba-fig img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  .ba-fig figcaption{padding:15px 19px;font-size:14px;color:var(--ink-soft)}
+  .ba-fig figcaption strong{color:var(--ink)}
+
+  /* price */
+  .price-lead{
+    background:var(--surface);border:2px solid var(--brand);border-radius:20px;
+    padding:26px 22px;text-align:center;box-shadow:var(--shadow);margin-bottom:16px;
+  }
+  .price-lead .pl-label{font-size:14px;font-weight:700;color:var(--ink-soft);margin:0}
+  .price-lead .pl-num{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;color:var(--brand-deep);line-height:1.15;margin:4px 0 2px}
+  .price-lead .pl-num .yen-big{font-size:56px}
+  @media (min-width:900px){ .price-lead .pl-num .yen-big{font-size:68px} }
+  .price-lead .pl-num .yen-unit{font-size:22px}
+  .price-lead .pl-sub{font-size:13.5px;color:var(--ink-soft);margin:0}
+  .price-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media (min-width:860px){ .price-grid{grid-template-columns:1fr 1fr} }
+  .price-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
+  .price-card h3{margin:0;padding:13px 20px;background:var(--brand-navy);color:#fff;font-size:15.5px;font-weight:900}
+  table.price{width:100%;border-collapse:collapse;font-size:15px}
+  table.price th,table.price td{padding:12px 20px;text-align:left;border-bottom:1px solid var(--line)}
+  table.price tr:last-child th,table.price tr:last-child td{border-bottom:none}
+  table.price td.yen{text-align:right;font-weight:900;font-size:17px;color:var(--brand-deep);white-space:nowrap;font-family:"Zen Kaku Gothic New",sans-serif}
+  .price-note{font-size:13px;color:var(--ink-soft);margin:16px 2px 0}
+
+  /* cta band */
+  .cta-band{
+    background:var(--brand-navy);border-radius:20px;color:#fff;
+    padding:30px 24px;text-align:center;box-shadow:var(--shadow);
+  }
+  .cta-band h3{margin:0 0 6px;font-size:21px;font-weight:900;color:#fff}
+  @media (min-width:900px){ .cta-band h3{font-size:25px} }
+  .cta-band p{margin:0 0 18px;font-size:14px;opacity:.92}
+  .cta-band .cta-row{max-width:640px;margin:0 auto}
+  .cta-band .btn-form{background:#fff;color:var(--brand-deep);border-color:#fff;box-shadow:none}
+  .cta-band .btn-form:hover{background:var(--brand-soft)}
+  .cta-band .btn-call{background:transparent;color:#fff;border-color:rgba(255,255,255,.75);box-shadow:none}
+  .cta-band .btn-call:hover{background:rgba(255,255,255,.12)}
+
+  /* flow */
+  .flow li img{width:100%;aspect-ratio:8/5;object-fit:cover;border-radius:10px;margin-bottom:14px}
+  .flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:12px}
+  @media (min-width:640px){ .flow{grid-template-columns:1fr 1fr} }
+  @media (min-width:960px){ .flow{grid-template-columns:repeat(4,1fr)} }
+  .flow li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm)}
+  .flow .num{
+    display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;
+    background:var(--brand);color:#fff;font-weight:900;font-size:16px;margin-bottom:10px;
+    font-family:"Zen Kaku Gothic New",sans-serif;
+  }
+  .flow h3{margin:0 0 5px;font-size:16px;font-weight:900}
+  .flow p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.7}
+
+  /* rep (representative) */
+  .rep-card .area-tag{
+    display:inline-block;font-size:12px;font-weight:700;color:var(--brand-deep);
+    background:var(--brand-soft);border-radius:999px;padding:3px 11px;margin:0 0 10px;
+  }
+
+  /* field reports */
+  .reports{display:grid;grid-template-columns:1fr;gap:14px}
+  @media (min-width:860px){ .reports{grid-template-columns:1fr 1fr 1fr} }
+  .report{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;box-shadow:var(--shadow-sm);min-height:140px;
+  }
+  .report .r-meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+  .report .r-date,.report .r-area{
+    font-size:14px;font-weight:700;color:var(--brand-deep);
+    background:var(--brand-soft);border-radius:999px;padding:5px 14px;
+  }
+  .report h3{margin:0 0 8px;font-size:15.5px;font-weight:900}
+  .report .slot{font-size:13.5px;color:var(--ink-soft);margin:0}
+  .report .r-body{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.8}
+  .training-strip{
+    margin-top:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow-sm);display:grid;grid-template-columns:1fr;
+  }
+  @media (min-width:760px){ .training-strip{grid-template-columns:1.2fr 1fr} }
+  .training-strip img{width:100%;height:100%;object-fit:cover;aspect-ratio:8/5}
+  @media (min-width:760px){ .training-strip img{aspect-ratio:auto} }
+  .training-strip .t-body{padding:22px}
+  .training-strip h3{margin:0 0 6px;font-size:17px;font-weight:900}
+  .training-strip p{margin:0;font-size:14px;color:var(--ink-soft)}
+
+  /* voices */
+  .voice-agg{
+    background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);
+    padding:28px 22px;text-align:center;margin-bottom:16px;
+  }
+  .voice-agg .va-stars{color:var(--star);font-size:30px;letter-spacing:4px;line-height:1}
+  .voice-agg .va-score{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:44px;line-height:1.2;color:var(--ink)}
+  .voice-agg .va-score small{font-size:19px;color:var(--ink-soft);font-weight:700}
+  .voice-agg p{margin:2px 0 0;font-size:13.5px;color:var(--ink-soft)}
+  .voices{display:grid;grid-template-columns:1fr;gap:14px}
+  @media (min-width:860px){ .voices{grid-template-columns:1fr 1fr 1fr} }
+  .voice{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+    box-shadow:var(--shadow-sm);
+  }
+  .voice .stars{color:var(--star);letter-spacing:3px;font-size:25px;line-height:1.25}
+  .voice .who{font-size:13px;font-weight:900;color:var(--ink);margin:5px 0 9px}
+  .voice .v-body{font-size:14px;color:var(--ink);margin:0;line-height:1.85}
+  .voice-src{font-size:12.5px;color:var(--ink-soft);margin:14px 2px 0}
+  .illust-accent{
+    margin:0 auto 18px;max-width:680px;background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:14px;box-shadow:var(--shadow-sm);
+  }
+  .illust-accent img{width:100%;height:auto;border-radius:8px}
+
+  /* relief */
+  .relief-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  @media (min-width:640px){ .relief-grid{grid-template-columns:1fr 1fr} }
+  .relief{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;box-shadow:var(--shadow-sm);
+  }
+  .relief .r-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .relief .ic{
+    flex:0 0 46px;width:46px;height:46px;border-radius:50%;background:var(--brand-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--brand);
+  }
+  .relief h3{margin:0;font-size:16.5px;font-weight:900}
+  .relief p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.75}
+  .relief ul{margin:6px 0 0;padding-left:1.2em;font-size:13.5px;color:var(--ink-soft)}
+
+  /* areas */
+  .kawanishi-banner{
+    display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+    background:var(--brand-navy);color:#fff;border-radius:20px;padding:26px 24px;margin-bottom:16px;box-shadow:var(--shadow);
+  }
+  .kawanishi-banner h3{margin:0 0 4px;font-size:20px;font-weight:900;color:#fff}
+  .kawanishi-banner p{margin:0;font-size:14px;opacity:.92}
+  .kawanishi-banner .go{
+    background:#fff;color:var(--brand-deep);border:none;cursor:pointer;font:inherit;font-weight:900;
+    padding:13px 24px;border-radius:999px;font-size:15px;white-space:nowrap;
+  }
+  .area-grid{display:grid;grid-template-columns:1fr;gap:12px}
+  @media (min-width:640px){ .area-grid{grid-template-columns:1fr 1fr} }
+  .area-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow-sm)}
+  .area-card h3{margin:0 0 6px;font-size:16px;font-weight:900;color:var(--brand-deep)}
+  .area-card p{margin:0;font-size:14px;color:var(--ink-soft)}
+  .area-note{font-size:13px;color:var(--ink-soft);margin-top:14px}
+  .area-chips{display:flex;flex-wrap:wrap;gap:9px}
+  .area-chips span{
+    font-size:14.5px;font-weight:700;background:var(--surface);color:var(--ink);
+    border:1px solid var(--line);border-radius:999px;padding:8px 16px;box-shadow:var(--shadow-sm);
+  }
+  .area-chips span.center{background:var(--brand);border-color:var(--brand);color:#fff}
+
+  /* faq */
+  .faq details{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    margin-bottom:10px;overflow:hidden;box-shadow:var(--shadow-sm);
+  }
+  .faq summary{
+    cursor:pointer;font-weight:900;font-size:17px;padding:21px 22px;list-style:none;line-height:1.65;
+    display:flex;gap:10px;align-items:baseline;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .q{color:var(--brand);font-family:"Zen Kaku Gothic New",sans-serif}
+  .faq .a{padding:2px 22px 21px 49px;font-size:14.5px;color:var(--ink-soft);line-height:1.9}
+
+  /* booking */
+  .booking{
+    background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px 24px;
+    box-shadow:var(--shadow);
+  }
+  .booking h2{margin:0 0 6px;font-size:23px;font-weight:900;text-align:center}
+  .booking .b-sub{margin:0 0 6px;color:var(--ink-soft);font-size:14.5px;text-align:center}
+  .booking ol{margin:16px 0;padding-left:1.3em;font-size:15px}
+  .booking ol li{margin-bottom:9px}
+  .time-slots{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 20px;justify-content:center}
+  .time-slots span{
+    font-size:13.5px;font-weight:700;background:var(--surface-2);border:1px solid var(--line);
+    border-radius:999px;padding:7px 14px;
+  }
+  .big-form{
+    display:block;text-align:center;background:var(--brand);color:#fff;text-decoration:none;
+    border-radius:14px;padding:18px;font-weight:900;box-shadow:0 6px 18px rgba(10,116,201,.32);
+  }
+  .big-form:hover{background:var(--brand-deep)}
+  .big-form .bf-main{font-size:22px;letter-spacing:.02em;font-family:"Zen Kaku Gothic New",sans-serif}
+  .big-form small{display:block;font-size:13px;font-weight:700;opacity:.92;margin-bottom:2px}
+  .big-tel{
+    display:block;text-align:center;background:var(--surface);color:var(--cta-deep);text-decoration:none;
+    border:2px solid var(--cta);border-radius:14px;padding:14px 18px;font-weight:900;margin-top:10px;
+  }
+  .big-tel:hover{background:var(--cta-soft)}
+  .big-tel .num{font-size:24px;letter-spacing:.02em;font-family:"Zen Kaku Gothic New",sans-serif}
+  .big-tel small{display:block;font-size:12.5px;font-weight:700}
+
+  footer.site{
+    margin-top:70px;background:var(--bg-soft);border-top:1px solid var(--line);padding:30px 0 36px;
+  }
+  footer.site .f-logo{margin:0 0 10px}
+  footer.site .f-logo img{height:38px;width:auto;background:#fff;border-radius:8px;padding:5px 9px;box-shadow:var(--shadow-sm)}
+  footer.site .f-name{font-weight:900;font-family:"Zen Kaku Gothic New",sans-serif}
+  footer.site p{font-size:13px;color:var(--ink-soft);margin:4px 0}
+  footer.site .proto-note{
+    margin-top:14px;font-size:12px;border:1px dashed var(--accent);color:var(--accent-ink);
+    border-radius:10px;padding:10px 14px;background:var(--surface);
+  }
+
+  /* sticky mobile bar */
+  .sticky-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;
+    background:var(--surface);border-top:1px solid var(--line);
+    padding:9px 10px calc(9px + env(safe-area-inset-bottom));
+    gap:9px;box-shadow:0 -4px 18px rgba(11,58,92,.10);
+  }
+  .sticky-bar a{
+    text-align:center;text-decoration:none;font-weight:900;border-radius:12px;padding:13px 6px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .sticky-bar .form-link{flex:1.45;background:var(--brand);color:#fff;font-size:15.5px;box-shadow:0 4px 14px rgba(10,116,201,.35)}
+  .sticky-bar .call{flex:1;background:var(--surface);color:var(--cta-deep);border:2px solid var(--cta);font-size:13px}
+  @media (min-width:900px){ .sticky-bar{display:none} }
+
+  /* ---------- kawanishi page ---------- */
+  .crumb{padding:20px 0 0;font-size:13px;color:var(--ink-soft)}
+  .crumb button{background:none;border:none;font:inherit;color:var(--brand);cursor:pointer;font-weight:700;padding:0}
+  .page-hero{position:relative;border-radius:20px;overflow:hidden;margin-top:16px;box-shadow:var(--shadow)}
+  .page-hero img{width:100%;height:clamp(240px,58vw,380px);object-fit:cover;object-position:center 30%}
+  .page-hero .ph-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,38,64,.05) 30%,rgba(7,38,64,.85) 100%)}
+  .page-hero .ph-body{position:absolute;left:0;right:0;bottom:0;color:#fff;padding:22px 24px}
+  .page-hero h1{margin:0 0 6px;font-size:26px;font-weight:900;line-height:1.4;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+  @media (min-width:900px){ .page-hero h1{font-size:35px} }
+  .page-hero p{margin:0;font-size:14px;opacity:.96}
+  .rep-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+    display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;box-shadow:var(--shadow-sm);margin-bottom:14px;
+  }
+  .rep-card img{
+    width:210px;height:250px;object-fit:cover;object-position:72% 16%;
+    border-radius:14px;flex:0 0 auto;box-shadow:var(--shadow-sm);
+  }
+  @media (max-width:600px){
+    .rep-card img{width:100%;height:280px}
+  }
+  .rep-card h3{margin:0 0 6px;font-size:18px;font-weight:900}
+  .rep-card p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+  .nearby{display:flex;flex-wrap:wrap;gap:9px}
+  .nearby button{
+    font:inherit;font-size:14.5px;font-weight:700;cursor:pointer;
+    background:var(--surface);color:var(--brand-deep);border:1.5px solid var(--brand);
+    border-radius:999px;padding:9px 18px;
+  }
+  .nearby button:hover{background:var(--brand-soft)}
+  .unsupported{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;
+    font-size:14px;color:var(--ink-soft);box-shadow:var(--shadow-sm);
+  }
+  .unsupported h3{margin:0 0 8px;color:var(--ink);font-size:15.5px}
+  .unsupported ul{margin:0;padding-left:1.2em}
+  .toast{
+    position:fixed;left:50%;bottom:100px;transform:translateX(-50%) translateY(20px);
+    background:var(--ink);color:var(--bg);font-size:14px;font-weight:700;
+    padding:11px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:80;
+    max-width:88vw;text-align:center;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media (min-width:900px){ .toast{bottom:32px} }
+  /* ---------- stats band ---------- */
+  .stats-band{background:var(--brand-navy);color:#fff;padding:22px 0 20px}
+  .stats-in{display:grid;grid-template-columns:1fr;gap:16px;text-align:center}
+  @media (min-width:760px){ .stats-in{grid-template-columns:1fr 1fr 1fr;gap:12px} }
+  .stat .s-num{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:38px;line-height:1.15;color:#ffd35c}
+  @media (min-width:900px){ .stat .s-num{font-size:46px} }
+  .stat .s-num .s-unit{font-size:20px}
+  .stat .s-num-areas{font-size:21px;padding-top:9px}
+  @media (min-width:900px){ .stat .s-num-areas{font-size:25px;padding-top:11px} }
+  .stat .s-label{font-size:13px;font-weight:700;margin-top:3px}
+  .stat .s-label .s-stars{color:var(--star);letter-spacing:2px}
+
+  /* ---------- worries ---------- */
+  .worries{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+  @media (min-width:820px){ .worries{grid-template-columns:1.05fr 1fr;gap:26px} }
+  .worries img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+  .worry-list{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+  .worry-list li{
+    display:flex;align-items:center;gap:13px;background:var(--surface);border:1px solid var(--line);
+    border-radius:14px;padding:16px 18px;font-weight:900;font-size:16.5px;line-height:1.55;box-shadow:var(--shadow-sm);
+  }
+  .w-check{
+    flex:0 0 27px;width:27px;height:27px;border-radius:8px;background:var(--brand);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;line-height:1;
+  }
+
+  /* ---------- price v2 ---------- */
+  .price-sub{font-size:17px;font-weight:900;margin:24px 0 12px}
+  .price-cards{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  @media (min-width:700px){ .price-cards{grid-template-columns:repeat(3,1fr)} }
+  @media (min-width:960px){ .price-cards{grid-template-columns:repeat(5,1fr)} }
+  .pcard{background:var(--surface);border:2px solid var(--brand);border-radius:16px;padding:16px 10px 14px;text-align:center;box-shadow:var(--shadow-sm)}
+  .pcard .pc-count{display:inline-block;background:var(--brand-soft);color:var(--brand-deep);font-size:13px;font-weight:900;border-radius:999px;padding:3px 13px;margin-bottom:8px}
+  .pcard .pc-num{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:31px;line-height:1.15;color:var(--brand-deep)}
+  .pcard .pc-num .pc-yen{font-size:16px}
+  .opt-chips{display:flex;flex-wrap:wrap;gap:9px}
+  .ochip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 15px 8px 9px;font-size:14.5px;font-weight:700;box-shadow:var(--shadow-sm)}
+  .ochip strong{color:var(--brand-deep);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;white-space:nowrap}
+  .ochip-dot{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;line-height:1}
+  .pay-box{margin-top:26px;background:var(--brand-soft);border-radius:16px;padding:18px 20px 20px}
+  .pay-box .price-sub{margin:0 0 12px}
+  .pay-chips{display:flex;flex-wrap:wrap;gap:9px}
+  .pchip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-size:15px;font-weight:900;color:var(--ink)}
+  .pchip svg{color:var(--brand);flex:0 0 auto}
+  .hard-note{margin-top:16px;background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:15px 18px}
+  .hard-note p{margin:0;font-size:13px;color:var(--ink-soft);line-height:1.8}
+  .hard-note strong{color:var(--ink)}
+
+  /* ---------- heading badge ---------- */
+  .sec-head h2::before,.booking h2::before{
+    content:"";display:inline-block;width:33px;height:33px;margin-right:11px;vertical-align:-8px;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%230a74c9'/%3E%3Cpath d='M12 4.8c2.6 3.3 4.7 5.9 4.7 8.4a4.7 4.7 0 1 1-9.4 0c0-2.5 2.1-5.1 4.7-8.4z' fill='%23ffffff'/%3E%3C/svg%3E") center/contain no-repeat;
+  }
+  @media (min-width:900px){ .sec-head h2::before{width:38px;height:38px;vertical-align:-9px} }
+
+  /* ---------- heading spot illustration ---------- */
+  .h2-row{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+  .h2-row .spot-ill{width:84px;height:84px;object-fit:cover;border-radius:18px;flex:0 0 auto}
+  @media (max-width:480px){ .h2-row{gap:12px} .h2-row .spot-ill{width:72px;height:72px} }
+
+  /* ---------- top page: area page links ---------- */
+  .area-links{margin-top:14px;padding-top:13px;border-top:1px dashed var(--line)}
+  .area-links .al-pref{font-size:13px;font-weight:900;color:var(--ink);margin:10px 0 5px}
+  .area-links .al-pref:first-child{margin-top:0}
+  .area-links .al-list{display:flex;flex-wrap:wrap;gap:3px 13px}
+  .area-links .al-list a{font-size:13.5px;font-weight:700;color:var(--brand-deep);text-decoration:none;line-height:1.75}
+  .area-links .al-list a:hover{text-decoration:underline}
+
+  .hidden{display:none !important}
+</style>
+<style>.pagenav{display:none!important}.proto-note{display:none!important}</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap header-in">
+    <a class="logo" href="#" id="logoLink" aria-label="たすかるエアコンお掃除専門店 トップページへ"><img src="assets/logo.png" alt="たすかるエアコンお掃除専門店" width="400" height="113" /></a>
+    <a class="header-tel" href="tel:09038397267"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>090-3839-7267</a>
+  </div>
+  <nav class="pagenav">
+    <div class="wrap pagenav-in">
+      <button type="button" id="navTop" aria-current="page">トップページ</button>
+      <button type="button" id="navKawanishi">川西市ページ（エリアページ見本）</button>
+      <span class="proto-chip">新サイト試作</span>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= トップページ ================= -->
+<main id="pageTop">
+
+  <!-- ファーストビュー -->
+  <div class="hero">
+    <img class="hero-img" src="assets/hero-work.jpg" alt="壁掛けエアコンを分解して内部洗浄するスタッフの作業実写" />
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <div class="wrap">
+        <span class="area-line">本部：兵庫県川西市 ／ 関東・関西・東海・九州対応</span>
+        <h1>エアコンの<span class="hl">カビ・ニオイ</span>、<br />フィルターの奥まで洗浄します</h1>
+        <p class="sub">丁寧な分解洗浄と高圧洗浄で、熱交換器・送風ファンの奥の汚れまで。エコ洗剤使用で、赤ちゃんやペットがいるご家庭も安心です。</p>
+      </div>
+    </div>
+  </div>
+  <div class="stats-band">
+    <div class="wrap stats-in">
+      <div class="stat"><div class="s-num">450<span class="s-unit">件</span></div><div class="s-label">口コミ件数 ／ 評価 <span class="s-stars">★★★★★</span> 5.0</div></div>
+      <div class="stat"><div class="s-num">1万<span class="s-unit">件以上</span></div><div class="s-label">年間施工実績</div></div>
+      <div class="stat"><div class="s-num s-num-areas">関東・関西・東海・九州</div><div class="s-label">対応エリア</div></div>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="trust-row">
+      <div class="trust">
+        <div class="t-num"><span class="stars">★★★★★</span>5.0</div>
+        <div class="t-label">Google口コミ評価<br />450件の実績 ※</div>
+      </div>
+      <div class="trust">
+        <div class="t-num price">8,900<span style="font-size:14px">円〜</span></div>
+        <div class="t-label">壁掛けエアコン1台<br />税込・出張費込み</div>
+      </div>
+      <div class="trust">
+        <div class="t-num">8–21時</div>
+        <div class="t-label">毎日営業<br />夜の訪問も対応</div>
+      </div>
+    </div>
+    <p class="trust-note">※ 口コミ評価・件数はGoogleビジネスプロフィールの実績です。</p>
+    <div class="cta-row">
+      <a class="btn-form" href="https://6qj22.hp.peraichi.com/" target="_blank" rel="noopener"><span class="bf-in">フォームで予約・相談<small>ご相談・お見積りもこちらから</small></span></a>
+      <a class="btn-call" href="tel:09038397267"><span class="bf-in">電話 090-3839-7267<small>毎日 8:00〜21:00 受付</small></span></a>
+    </div>
+  </div>
+
+  <!-- お悩み -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 7h10M10 12h10M10 17h10"/><path d="M3.5 7l1.2 1.2L7 5.9"/><path d="M3.5 12l1.2 1.2L7 10.9"/><path d="M3.5 17l1.2 1.2L7 15.9"/></svg>お悩みチェック</span><h2>こんなお悩みありませんか</h2><div class="bar"></div></div>
+      <div class="worries">
+        <img src="assets/worries.jpg" alt="エアコンから出てくるカビやホコリのキャラクターに困っているお客様のイラスト" loading="lazy" />
+        <ul class="worry-list">
+          <li><span class="w-check">✓</span>吹き出し口の奥にカビが見える</li>
+          <li><span class="w-check">✓</span>つけるとカビ臭い・目やのどがかゆい</li>
+          <li><span class="w-check">✓</span>効きが悪くて電気代が気になる</li>
+          <li><span class="w-check">✓</span>プロのお掃除を頼んだことがない</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ビフォーアフター -->
+  <section class="block soft">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2.5h5L16 6"/></svg>施工写真で確認</span><h2>洗浄前後の違い</h2><div class="bar"></div><p>実際の施工写真です。フィルター掃除だけでは落とせない内部のカビ・ホコリを、分解洗浄で洗い流します。</p></div>
+      <div class="ba-grid">
+        <figure class="ba-fig">
+          <img src="assets/ba-1.jpg" alt="送風口内部の洗浄前（カビとホコリ）と洗浄後（清潔な状態）の比較写真" loading="lazy" />
+          <figcaption><strong>送風口・ファンまわり</strong>：吹き出し口の黒カビは、内部洗浄でここまで落ちます。</figcaption>
+        </figure>
+        <figure class="ba-fig">
+          <img src="assets/ba-2.jpg" alt="熱交換器の洗浄前（黄ばんだ汚れ）と洗浄後の比較写真" loading="lazy" />
+          <figcaption><strong>熱交換器（アルミフィン）</strong>：黄ばんだ汚れが取れ、風のニオイの原因を断ちます。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 選ばれるポイント -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>当店のこだわり</span><h2>選ばれるポイント</h2><div class="bar"></div><p>作業の丁寧さと、ご家庭への配慮を大切にしています。</p></div>
+      <div class="points">
+        <div class="point"><img class="p-img" src="assets/point2-disassemble.jpg" alt="分解したエアコンのパーツを並べて洗うスタッフと、笑顔のエアコンのイラスト" loading="lazy" /><h3>丁寧な分解洗浄</h3><p>外装カバーやパーツを丁寧に分解し、内部の熱交換器・送風口・ファンの奥まで高圧洗浄します。</p></div>
+        <div class="point"><img class="p-img" src="assets/point2-eco.jpg" alt="葉っぱマークの洗剤ボトルと、眠る赤ちゃんと猫のイラスト" loading="lazy" /><h3>エコ洗剤を使用</h3><p>刺激臭や洗剤残りの少ないエコ洗剤を使用。赤ちゃんやペットがいるご家庭も安心です。</p></div>
+        <div class="point"><img class="p-img" src="assets/point3-beforeafter.jpg" alt="汚れて困った顔のエアコンと、きれいになって笑顔のエアコンを比べたイラスト" loading="lazy" /><h3>ビフォーアフター写真で説明</h3><p>作業前後の写真で、キレイになった状態をその場でご確認いただけます。</p></div>
+        <div class="point"><img class="p-img" src="assets/point2-insurance.jpg" alt="盾のキャラクターと家のイラスト" loading="lazy" /><h3>損害保険加入済み</h3><p>万が一の事故や破損に備え、損害保険に加入しています。安心してお任せください。</p></div>
+        <div class="point"><img class="p-img" src="assets/point3-after.jpg" alt="電話で対応するスタッフとカレンダーのイラスト" loading="lazy" /><h3>アフターサポート</h3><p>作業後に気になる点がありましたら、再施工で対応いたします。</p></div>
+        <div class="point"><img class="p-img" src="assets/point3-training.jpg" alt="エアコンの模型で教える先輩スタッフと、メモを取る後輩スタッフのイラスト" loading="lazy" /><h3>研修を受けたスタッフ</h3><p>各エリアの現地スタッフが訪問します。全員が研修を受け、仕上がりの基準をそろえています。</p></div>
+      </div>
+      <p class="area-note">※ 完全分解洗浄は、機種・設置状況と担当スタッフにより対応できる場合があります。ご希望の場合は事前にご相談ください。</p>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="block" id="price">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2v20M17 6.5c-.8-1.2-2.7-2-5-2-3 0-5 1.6-5 4 0 5.5 10 3 10 8 0 2.4-2 4-5 4-2.3 0-4.2-.8-5-2"/></svg>明朗・税込料金</span><div class="h2-row"><h2>料金表</h2></div><div class="bar"></div><p>すべて税込価格です。作業時間は1台あたり1〜2時間が目安です。</p></div>
+      <div class="price-lead">
+        <p class="pl-label">壁掛けエアコン 1台</p>
+        <p class="pl-num"><span class="yen-big">8,900</span><span class="yen-unit">円（税込）〜</span></p>
+        <p class="pl-sub">2台目以降は1台あたりの単価が下がります。お支払いは作業完了後でOKです。</p>
+      </div>
+      <h3 class="price-sub">基本料金（壁掛けエアコン）</h3>
+      <div class="price-cards">
+        <div class="pcard"><span class="pc-count">1台</span><span class="pc-num">8,900<span class="pc-yen">円</span></span></div>
+        <div class="pcard"><span class="pc-count">2台</span><span class="pc-num">16,800<span class="pc-yen">円</span></span></div>
+        <div class="pcard"><span class="pc-count">3台</span><span class="pc-num">24,000<span class="pc-yen">円</span></span></div>
+        <div class="pcard"><span class="pc-count">4台</span><span class="pc-num">32,000<span class="pc-yen">円</span></span></div>
+        <div class="pcard"><span class="pc-count">5台以上</span><span class="pc-num">40,000<span class="pc-yen">円〜</span></span></div>
+      </div>
+      <h3 class="price-sub">オプション（1台あたり）</h3>
+      <div class="opt-chips">
+        <span class="ochip"><span class="ochip-dot">＋</span>お掃除機能付き<strong>+6,000円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>防カビ・抗菌コート<strong>+2,500円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>室外機清掃<strong>+4,000円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>ドレンホース洗浄<strong>+2,500円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>おまとめセット<strong>+5,000円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>まるごとセット<strong>+7,000円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>天カセ<strong>+14,400円／台</strong></span>
+      </div>
+      <div class="pay-box">
+        <h3 class="price-sub">お支払い方法</h3>
+        <div class="pay-chips">
+          <span class="pchip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/></svg>現金</span>
+          <span class="pchip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>クレジットカード</span>
+          <span class="pchip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>PayPay</span>
+        </div>
+      </div>
+      <div class="hard-note">
+        <p><strong>対応が難しい機種もあります：</strong>FUJITSU ノクリアAS-Xシリーズ、三菱 霧ヶ峰アドバンスFZシリーズ、SHARP エアレスト／AY-Zシリーズ（一部対応可）、窓用エアコン、壁埋め込み型、幅90cm以上の大型機。判断に迷う場合は、まずご相談ください。</p>
+      </div>
+      <p class="price-note">お支払いは現金・クレジットカード・PayPay等に対応しています。お掃除機能の有無は当日現場で判断いたします。通常タイプでご予約いただいたエアコンがお掃除機能付きだった場合は、追加料金が発生いたしますのでご了承ください。</p>
+    </div>
+  </section>
+
+  <!-- CTA帯 -->
+  <section class="block">
+    <div class="wrap">
+      <div class="cta-band">
+        <h3>ご予約・ご相談はフォームからどうぞ</h3>
+        <p>台数とご希望日を入力して送信してください。対応エリア・対応機種の確認だけでも大丈夫です。お電話でも承っています。</p>
+        <div class="cta-row">
+          <a class="btn-form" href="https://6qj22.hp.peraichi.com/" target="_blank" rel="noopener"><span class="bf-in">フォームで予約・相談<small>ご相談・お見積りもこちらから</small></span></a>
+          <a class="btn-call" href="tel:09038397267"><span class="bf-in">電話 090-3839-7267<small>毎日 8:00〜21:00 受付</small></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お客様の声 -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6z"/></svg>Google口コミ実績</span><div class="h2-row"><h2>お客様の声</h2><img class="spot-ill" src="assets/spot-voice.jpg" alt="" width="480" height="480" loading="lazy"></div><div class="bar"></div><p>Google口コミでいただいた評価が、当店のいちばんの実績です。</p></div>
+      <div class="voice-agg">
+        <div class="va-stars">★★★★★</div>
+        <div class="va-score">5.0 <small>／ 口コミ 450件</small></div>
+        <p>※ Googleビジネスプロフィールの口コミ実績です。</p>
+      </div>
+      <div class="voices">
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">m さん</p><p class="v-body">年末にエアコンクリーニングをお願いしました。仲里さんという方が担当してくれたのですが、1Kでペットが居るという事も配慮して作業して下さり、とても助かりました。今回こちらでクリーニングをお願いする半年前にも違う業者様にお願いしましたが、その時より外せる部品も外して掃除して下さり、早くて丁寧でとても良かったです。…まだとても綺麗なままですが、また汚れてきたらお願いしたいと思っています！ありがとうございました。</p></div>
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">catuxa さん</p><p class="v-body">エアコンと室外機とドレーンのクリーニングをお願いしました。お電話の対応から当日の対応もとても丁寧でした。作業の手順も一つ一つ説明して下さり、使用したお風呂場（排水溝も）やトイレまでとても綺麗にお掃除して下さり恐縮でした。…エアコンも室外機もドレーンも見違えるようにピカピカになり、これからの季節に気持ち良くエアコンが使えるようになって嬉しいです。お掃除機能付きでこのお値段はとても安くてビックリです。担当して下さった望月さんありがとうございました。また是非お願いしたいです。</p></div>
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">森あゆみ さん</p><p class="v-body">時間に余裕のある家庭だったのもあり時間より早めに来られて作業にあたってくださりました。担当は宮脇さんという方です。お掃除機能付きエアコンだったのですがリビングに置いていたということもあって油汚れとカビがたくさん生えてしまっていたようですがすっかり綺麗になりました。…仕上がりはやり残しなども見られず新品のエアコンに戻った気分です。エアコンの手入れの豆知識を教えてくだしったり、小さな子どもが在宅していましたが声かけなども優しくまたお願いしたいなと思いました。ありがとうございました！</p></div>
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">sachi akiba さん</p><p class="v-body">ミツモアで依頼し、数ある中から価格がお安く、口コミ評価の高いこちらに依頼。和田さんという爽やかな男性が作業しに来てくださいました。子供にも優しく、手際良く作業してくれましたし、作業前と後の汚れの違いを3台全て写真や動画で確認させていただけて、いかに汚れがついていたかがよくわかりました。…エアコンだけでなく、部品の洗浄に使ったお風呂場の換気扇や排水溝も綺麗にしていただけて、大満足の初☆エアコン業者清掃でした。</p></div>
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">大久保美和 さん</p><p class="v-body">9年間そのままだったエアコンクリーニングをして頂きました。タバコを良く吸う事務所でエアコンはヤニとカビまみれでしたが、新品になったかの様に綺麗にピカピカになりました。お値段もお安くて良いです。後、アドバイザー池田さんのハキハキとした説明、作業の手際の良さ、とても良かったです。ありがとうございました。</p></div>
+      </div>
+      <p class="voice-src">※ Googleマップの口コミより抜粋（原文のまま掲載し、長文は文の切れ目で省略して「…」を付けています）</p>
+    </div>
+  </section>
+
+  <!-- 現場レポート -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M9 10h6M9 14h6M9 18h4"/></svg>日々の施工記録</span><h2>現場レポート</h2><div class="bar"></div><p>日々の施工の記録です。作業前後の写真とあわせて、順次掲載していきます。</p></div>
+      <div class="reports">
+        <article class="report">
+          <p class="r-meta"><span class="r-date">2026年10月</span><span class="r-area">大阪市</span></p>
+          <h3>壁掛けエアコン（お掃除機能付き）2台</h3>
+          <p class="r-body">お掃除機能付きの壁掛けエアコン2台を、丁寧に分解して内部までしっかり洗浄しました。熱交換器や送風ファンに付着したカビとホコリを高圧洗浄で洗い流し、作業前後の写真で仕上がりをご確認いただきました。</p>
+        </article>
+        <article class="report">
+          <p class="r-meta"><span class="r-date">2026年10月</span><span class="r-area">千葉市</span></p>
+          <h3>壁掛けエアコン1台＋室外機</h3>
+          <p class="r-body">壁掛けエアコン1台の通常分解洗浄と、室外機の清掃を行いました。外したカバーやフィルターなどのパーツは、お風呂場をお借りして1点ずつ丁寧に洗浄しています。</p>
+        </article>
+        <article class="report">
+          <p class="r-meta"><span class="r-date">2026年10月</span><span class="r-area">名古屋市</span></p>
+          <h3>壁掛けエアコン3台</h3>
+          <p class="r-body">壁掛けエアコン3台を分解洗浄し、仕上げに防カビ・抗菌コートを追加しました。本体を丁寧に拭き上げたあと、乾燥運転で内部の水分を飛ばして完了です。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作業の流れ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h13M4 12h13M4 18h9"/><circle cx="20" cy="18" r="1" fill="currentColor"/></svg>当日の進み方</span><h2>作業の流れ</h2><div class="bar"></div><p>お部屋を汚さないよう、養生を徹底してから作業に入ります。</p></div>
+      <ol class="flow">
+        <li><img src="assets/person-area.jpg" alt="エアコン周辺をブルーシートで養生するスタッフ" loading="lazy" /><span class="num">1</span><h3>養生</h3><p>エアコン周辺をブルーシートやビニールでしっかり覆います。</p></li>
+        <li><img src="assets/person-disassemble.jpg" alt="エアコンの外装カバーを外して分解するスタッフ" loading="lazy" /><span class="num">2</span><h3>動作確認・分解</h3><p>運転状態を確認してから、外装カバーやフィルターなどを丁寧に分解します。</p></li>
+        <li><img src="assets/person-cover.jpg" alt="エアコン本体に透明な養生カバーを装着するスタッフ" loading="lazy" /><span class="num">3</span><h3>本体の養生</h3><p>電装部分に水がかからないよう、本体をビニール（マスカー）で念入りに覆います。</p></li>
+        <li><img src="assets/person-parts.jpg" alt="お風呂場で分解したパーツを洗浄するスタッフ" loading="lazy" /><span class="num">4</span><h3>パーツ洗浄</h3><p>分解したパーツは、水栓のある場所をお借りして洗浄します。</p></li>
+        <li><img src="assets/person-wash.jpg" alt="養生カバーの中でエアコン内部を高圧洗浄するスタッフ" loading="lazy" /><span class="num">5</span><h3>本体内部の高圧洗浄</h3><p>エコ洗剤を散布し、高圧洗浄機で熱交換器・送風口・ファン・ドレンパンを洗い流します。</p></li>
+        <li><img src="assets/person-assemble.jpg" alt="洗浄したパーツをエアコン本体に組み立てるスタッフ" loading="lazy" /><span class="num">6</span><h3>組み立て</h3><p>パーツの水気を拭き取り、元どおりに組み立てます。</p></li>
+        <li><img src="assets/person-wipe.jpg" alt="洗浄後のエアコン本体を緑色のクロスで拭き上げるスタッフ" loading="lazy" /><span class="num">7</span><h3>拭き上げ・乾燥</h3><p>本体を拭き上げ、暖房運転で内部を乾燥させて完了です。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 代表紹介 -->
+  <section class="block soft">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.4 3.9-5.2 7.5-5.2s6.6 1.8 7.5 5.2"/></svg>代表あいさつ</span><h2>代表紹介</h2><div class="bar"></div><p>お客様のもとへは、各エリアの現地スタッフがお伺いします。仕上がりの基準と対応の質は、代表が責任を持ってそろえています。</p></div>
+      <div class="rep-card">
+        <img src="assets/rep-taoka.jpg" alt="リビングで赤ちゃんを抱っこする代表 田岡の写真" />
+        <div style="flex:1;min-width:240px">
+          <h3>代表 田岡隆博</h3><span class="area-tag">関東・関西・東海・九州対応</span>
+          <p>妻と子ども2人、孫、そして猫5匹と暮らす愛猫家。「自分の家族が暮らす部屋の空気をキレイにするつもりで」を合言葉に、洗剤選びから仕上げまで妥協しません。ペットと暮らすご家庭のエアコンの汚れ具合は、身をもって分かっているつもりです。</p>
+        </div>
+      </div>
+      <div class="training-strip">
+        <img src="assets/training-clean.jpg" alt="エアコンを前に説明する講師と、研修を受けるスタッフの様子" loading="lazy" />
+        <div class="t-body">
+          <h3>全スタッフが研修を受けています</h3>
+          <p>技術だけでなく、気配りや心遣いも大切に指導。独自の研修プログラムで、どのエリアでも同じ仕上がりの基準をそろえています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 安心セクション -->
+  <section class="block soft">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>ご利用前の確認</span><h2>ご依頼前の不安にお答えします</h2><div class="bar"></div><p>料金の支払いタイミングから、対応できない機種まで、先に明示します。</p></div>
+      <figure class="illust-accent"><img src="assets/relax3.jpg" alt="笑顔のエアコンを指して説明するスタッフと、喜ぶお客様のイラスト" loading="lazy" /></figure>
+      <div class="relief-grid">
+        <div class="relief">
+          <div class="r-head"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg></div><h3>お支払いは作業完了後</h3></div>
+          <p>お支払いは作業が終わってからで大丈夫です。現金・クレジットカード・PayPay等に対応しています。前金はいただきません。</p>
+        </div>
+        <div class="relief">
+          <div class="r-head"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 3v6h-6"/></svg></div><h3>作業後の再施工対応</h3></div>
+          <p>作業後にニオイや汚れなど気になる点がありましたら、アフターサポートとして再施工で対応いたします。気づいた時点でお電話ください。</p>
+        </div>
+        <div class="relief">
+          <div class="r-head"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>損害保険に加入済み</h3></div>
+          <p>万が一の事故や破損に備え、損害保険に加入しています。大切なお部屋と家電をお預かりする仕事だからこその備えです。</p>
+        </div>
+        <div class="relief">
+          <div class="r-head"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.5 5.5l13 13"/></svg></div><h3>対応できない機種があります</h3></div>
+          <p>構造上の理由により、以下は対応いたしかねます。型番がご不明な場合はお電話でご相談ください。</p>
+          <ul>
+            <li>FUJITSU ノクリア AS-Xシリーズ</li>
+            <li>MITSUBISHI 霧ヶ峰アドバンス FZシリーズ</li>
+            <li>SHARP エアレストシリーズ</li>
+            <li>窓用エアコン／壁埋め込み型／幅90cm以上の大型エアコン</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 対応エリア -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>訪問エリア</span><div class="h2-row"><h2>対応エリア</h2><img class="spot-ill" src="assets/spot-area.jpg" alt="" width="480" height="480" loading="lazy"></div><div class="bar"></div><p>本部は兵庫県川西市。各エリアに現地スタッフが在籍し、お近くのスタッフが訪問します。</p></div>
+      <div class="kawanishi-banner">
+        <div>
+          <h3>川西市にお住まいの方へ</h3>
+          <p>当店の本部・川西市の専用ページです。代表の紹介や地域の情報を掲載しています。</p>
+        </div>
+        <button class="go" type="button" id="goKawanishi">川西市ページを見る →</button>
+      </div>
+      <div class="area-grid">
+        <div class="area-card"><h3>関東</h3><p>東京都・神奈川県・埼玉県・千葉県・茨城県・群馬県の一部</p><div class="area-links" data-region-links="関東"></div></div>
+        <div class="area-card"><h3>関西</h3><p>大阪府・京都府・兵庫県の一部</p><div class="area-links" data-region-links="関西"></div></div>
+        <div class="area-card"><h3>東海</h3><p>愛知県の一部</p><div class="area-links" data-region-links="東海"></div></div>
+        <div class="area-card"><h3>九州</h3><p>福岡県・佐賀県の一部</p><div class="area-links" data-region-links="九州"></div></div>
+      </div>
+      <p class="area-note">※ エリア内でも一部対応できない地域があります。詳しくはお電話でご確認ください。</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3A2.6 2.6 0 0 1 12 7.8c1.4 0 2.5 1 2.5 2.2 0 1.7-2.3 2-2.3 3.5"/><circle cx="12.2" cy="17" r=".4" fill="currentColor"/></svg>Q &amp; A</span><div class="h2-row"><h2>よくある質問</h2><img class="spot-ill" src="assets/spot-faq.jpg" alt="" width="480" height="480" loading="lazy"></div><div class="bar"></div></div>
+      <div class="faq">
+        <details><summary><span class="q">Q</span>作業にはどれくらい時間がかかりますか？</summary><div class="a">1台あたり1〜2時間が目安です。台数やお掃除機能の有無によって前後しますので、複数台の場合はご予約時にお伝えください。</div></details>
+        <details><summary><span class="q">Q</span>赤ちゃんやペットがいても大丈夫ですか？</summary><div class="a">当店ではエコ洗剤を使用しており、刺激臭や洗剤残りもほとんどありません。作業中は、別の部屋でお待ちいただけるとより安心です。</div></details>
+        <details><summary><span class="q">Q</span>支払い方法を教えてください。</summary><div class="a">現金・クレジットカード・PayPay等に対応しています。作業完了後のお支払いです。</div></details>
+        <details><summary><span class="q">Q</span>対応できないエアコンはありますか？</summary><div class="a">一部の機種（FUJITSU ノクリア AS-Xシリーズ、MITSUBISHI 霧ヶ峰アドバンス FZシリーズ、SHARP エアレストシリーズ、窓用エアコン、壁埋め込み型、幅90cm以上の大型エアコン）は構造上の理由により対応いたしかねます。ご不明な場合はお電話でご相談ください。</div></details>
+        <details><summary><span class="q">Q</span>作業後に不具合があったらどうなりますか？</summary><div class="a">アフターサポートとして再施工で対応いたします。また、損害保険にも加入済みですので、安心してお任せください。</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 予約 -->
+  <section class="block" id="bookingTop">
+    <div class="wrap">
+      <div class="booking">
+        <h2>ご予約の流れ</h2>
+        <p class="b-sub">ご予約はお問い合わせフォームから承っています。お電話でも大丈夫です。</p>
+        <ol>
+          <li><strong>フォーム（またはお電話）でご予約</strong>：台数とご希望日をお知らせください</li>
+          <li><strong>日程の調整</strong>：ご予約から3営業日以内にご連絡し、訪問日時を確定します</li>
+          <li><strong>スタッフが訪問・作業</strong>：現地スタッフがお伺いし、1台あたり1〜2時間ほどで作業します</li>
+        </ol>
+        <p style="margin:0;font-size:14px;font-weight:700;text-align:center">訪問時間帯はこちらからお選びいただけます</p>
+        <div class="time-slots">
+          <span>午前 8〜9時 到着</span><span>午後 12〜14時</span><span>夕方 15〜18時</span><span>夜 18〜21時</span>
+        </div>
+        <a class="big-form" href="https://6qj22.hp.peraichi.com/" target="_blank" rel="noopener"><small>ご予約・ご相談はこちら</small><span class="bf-main">フォームで予約・相談</span></a>
+        <a class="big-tel" href="tel:09038397267"><small>お電話はこちら（毎日 8:00〜21:00）</small><span class="num">090-3839-7267</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= エリアページ（全268エリア・ハッシュ切替） ================= -->
+<main id="pageArea" class="hidden">
+  <div class="wrap">
+    <p class="crumb"><button type="button" id="backTop">← トップページ</button> ＞ エリアのご案内</p>
+  </div>
+
+  <!-- ファーストビュー -->
+  <div class="hero">
+    <img class="hero-img" src="assets/hero-work.jpg" alt="壁掛けエアコンを分解して内部洗浄するスタッフの作業実写" />
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <div class="wrap">
+        <span class="area-line">1台8,900円〜 ／ 出張費込みの明朗料金</span>
+        <h1 id="areaH1">川西市のエアコンクリーニング</h1>
+        <p class="sub">丁寧な分解洗浄と高圧洗浄で、熱交換器・送風ファンの奥の汚れまで。エコ洗剤使用で、赤ちゃんやペットがいるご家庭も安心です。</p>
+      </div>
+    </div>
+  </div>
+  <div class="stats-band">
+    <div class="wrap stats-in">
+      <div class="stat"><div class="s-num">450<span class="s-unit">件</span></div><div class="s-label">口コミ件数 ／ 評価 <span class="s-stars">★★★★★</span> 5.0</div></div>
+      <div class="stat"><div class="s-num">1万<span class="s-unit">件以上</span></div><div class="s-label">年間施工実績</div></div>
+      <div class="stat"><div class="s-num s-num-areas" id="areaStat">川西市を中心に約60分圏内</div><div class="s-label">対応エリア</div></div>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="trust-row">
+      <div class="trust">
+        <div class="t-num"><span class="stars">★★★★★</span>5.0</div>
+        <div class="t-label">Google口コミ評価<br />450件の実績 ※</div>
+      </div>
+      <div class="trust">
+        <div class="t-num price">8,900<span style="font-size:14px">円〜</span></div>
+        <div class="t-label">壁掛けエアコン1台<br />税込・出張費込み</div>
+      </div>
+      <div class="trust">
+        <div class="t-num">8–21時</div>
+        <div class="t-label">毎日営業<br />夜の訪問も対応</div>
+      </div>
+    </div>
+    <p class="trust-note">※ 口コミ評価・件数はGoogleビジネスプロフィールの実績です。</p>
+    <div class="cta-row">
+      <a class="btn-form" href="https://6qj22.hp.peraichi.com/" target="_blank" rel="noopener"><span class="bf-in">フォームで予約・相談<small>ご相談・お見積りもこちらから</small></span></a>
+      <a class="btn-call" href="tel:09038397267"><span class="bf-in">電話 090-3839-7267<small>毎日 8:00〜21:00 受付</small></span></a>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+  <!-- お悩み -->
+  <section class="block">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 7h10M10 12h10M10 17h10"/><path d="M3.5 7l1.2 1.2L7 5.9"/><path d="M3.5 12l1.2 1.2L7 10.9"/><path d="M3.5 17l1.2 1.2L7 15.9"/></svg>お悩みチェック</span><h2>こんなお悩みありませんか</h2><div class="bar"></div></div>
+      <div class="worries">
+        <img src="assets/worries.jpg" alt="エアコンから出てくるカビやホコリのキャラクターに困っているお客様のイラスト" loading="lazy" />
+        <ul class="worry-list">
+          <li><span class="w-check">✓</span>吹き出し口の奥にカビが見える</li>
+          <li><span class="w-check">✓</span>つけるとカビ臭い・目やのどがかゆい</li>
+          <li><span class="w-check">✓</span>効きが悪くて電気代が気になる</li>
+          <li><span class="w-check">✓</span>プロのお掃除を頼んだことがない</li>
+        </ul>
+      </div>
+  </section>
+
+  <!-- ビフォーアフター -->
+  <section class="block soft">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2.5h5L16 6"/></svg>施工写真で確認</span><h2>洗浄前後の違い</h2><div class="bar"></div><p>実際の施工写真です。フィルター掃除だけでは落とせない内部のカビ・ホコリを、分解洗浄で洗い流します。</p></div>
+      <div class="ba-grid">
+        <figure class="ba-fig">
+          <img src="assets/ba-1.jpg" alt="送風口内部の洗浄前（カビとホコリ）と洗浄後（清潔な状態）の比較写真" loading="lazy" />
+          <figcaption><strong>送風口・ファンまわり</strong>：吹き出し口の黒カビは、内部洗浄でここまで落ちます。</figcaption>
+        </figure>
+        <figure class="ba-fig">
+          <img src="assets/ba-2.jpg" alt="熱交換器の洗浄前（黄ばんだ汚れ）と洗浄後の比較写真" loading="lazy" />
+          <figcaption><strong>熱交換器（アルミフィン）</strong>：黄ばんだ汚れが取れ、風のニオイの原因を断ちます。</figcaption>
+        </figure>
+      </div>
+  </section>
+
+  <!-- 選ばれるポイント -->
+  <section class="block">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>当店のこだわり</span><h2>選ばれるポイント</h2><div class="bar"></div><p>作業の丁寧さと、ご家庭への配慮を大切にしています。</p></div>
+      <div class="points">
+        <div class="point"><img class="p-img" src="assets/point2-disassemble.jpg" alt="分解したエアコンのパーツを並べて洗うスタッフと、笑顔のエアコンのイラスト" loading="lazy" /><h3>丁寧な分解洗浄</h3><p>外装カバーやパーツを丁寧に分解し、内部の熱交換器・送風口・ファンの奥まで高圧洗浄します。</p></div>
+        <div class="point"><img class="p-img" src="assets/point2-eco.jpg" alt="葉っぱマークの洗剤ボトルと、眠る赤ちゃんと猫のイラスト" loading="lazy" /><h3>エコ洗剤を使用</h3><p>刺激臭や洗剤残りの少ないエコ洗剤を使用。赤ちゃんやペットがいるご家庭も安心です。</p></div>
+        <div class="point"><img class="p-img" src="assets/point3-beforeafter.jpg" alt="汚れて困った顔のエアコンと、きれいになって笑顔のエアコンを比べたイラスト" loading="lazy" /><h3>ビフォーアフター写真で説明</h3><p>作業前後の写真で、キレイになった状態をその場でご確認いただけます。</p></div>
+        <div class="point"><img class="p-img" src="assets/point2-insurance.jpg" alt="盾のキャラクターと家のイラスト" loading="lazy" /><h3>損害保険加入済み</h3><p>万が一の事故や破損に備え、損害保険に加入しています。安心してお任せください。</p></div>
+        <div class="point"><img class="p-img" src="assets/point3-after.jpg" alt="電話で対応するスタッフとカレンダーのイラスト" loading="lazy" /><h3>アフターサポート</h3><p>作業後に気になる点がありましたら、再施工で対応いたします。</p></div>
+        <div class="point"><img class="p-img" src="assets/point3-training.jpg" alt="エアコンの模型で教える先輩スタッフと、メモを取る後輩スタッフのイラスト" loading="lazy" /><h3>研修を受けたスタッフ</h3><p>各エリアの現地スタッフが訪問します。全員が研修を受け、仕上がりの基準をそろえています。</p></div>
+      </div>
+      <p class="area-note">※ 完全分解洗浄は、機種・設置状況と担当スタッフにより対応できる場合があります。ご希望の場合は事前にご相談ください。</p>
+  </section>
+
+  <!-- 料金 -->
+  <section class="block" id="priceKw">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2v20M17 6.5c-.8-1.2-2.7-2-5-2-3 0-5 1.6-5 4 0 5.5 10 3 10 8 0 2.4-2 4-5 4-2.3 0-4.2-.8-5-2"/></svg>明朗・税込料金</span><div class="h2-row"><h2>料金表</h2></div><div class="bar"></div><p>すべて税込価格です。作業時間は1台あたり1〜2時間が目安です。</p></div>
+      <div class="price-lead">
+        <p class="pl-label">壁掛けエアコン 1台</p>
+        <p class="pl-num"><span class="yen-big">8,900</span><span class="yen-unit">円（税込）〜</span></p>
+        <p class="pl-sub">2台目以降は1台あたりの単価が下がります。お支払いは作業完了後でOKです。</p>
+      </div>
+      <h3 class="price-sub">基本料金（壁掛けエアコン）</h3>
+      <div class="price-cards">
+        <div class="pcard"><span class="pc-count">1台</span><span class="pc-num">8,900<span class="pc-yen">円</span></span></div>
+        <div class="pcard"><span class="pc-count">2台</span><span class="pc-num">16,800<span class="pc-yen">円</span></span></div>
+        <div class="pcard"><span class="pc-count">3台</span><span class="pc-num">24,000<span class="pc-yen">円</span></span></div>
+        <div class="pcard"><span class="pc-count">4台</span><span class="pc-num">32,000<span class="pc-yen">円</span></span></div>
+        <div class="pcard"><span class="pc-count">5台以上</span><span class="pc-num">40,000<span class="pc-yen">円〜</span></span></div>
+      </div>
+      <h3 class="price-sub">オプション（1台あたり）</h3>
+      <div class="opt-chips">
+        <span class="ochip"><span class="ochip-dot">＋</span>お掃除機能付き<strong>+6,000円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>防カビ・抗菌コート<strong>+2,500円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>室外機清掃<strong>+4,000円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>ドレンホース洗浄<strong>+2,500円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>おまとめセット<strong>+5,000円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>まるごとセット<strong>+7,000円／台</strong></span>
+        <span class="ochip"><span class="ochip-dot">＋</span>天カセ<strong>+14,400円／台</strong></span>
+      </div>
+      <div class="pay-box">
+        <h3 class="price-sub">お支払い方法</h3>
+        <div class="pay-chips">
+          <span class="pchip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/></svg>現金</span>
+          <span class="pchip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>クレジットカード</span>
+          <span class="pchip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>PayPay</span>
+        </div>
+      </div>
+      <div class="hard-note">
+        <p><strong>対応が難しい機種もあります：</strong>FUJITSU ノクリアAS-Xシリーズ、三菱 霧ヶ峰アドバンスFZシリーズ、SHARP エアレスト／AY-Zシリーズ（一部対応可）、窓用エアコン、壁埋め込み型、幅90cm以上の大型機。判断に迷う場合は、まずご相談ください。</p>
+      </div>
+      <p class="price-note">お支払いは現金・クレジットカード・PayPay等に対応しています。お掃除機能の有無は当日現場で判断いたします。通常タイプでご予約いただいたエアコンがお掃除機能付きだった場合は、追加料金が発生いたしますのでご了承ください。</p>
+  </section>
+
+  <!-- お客様の声 -->
+  <section class="block">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5L2.6 9.4l6.5-.9L12 2.6z"/></svg>Google口コミ実績</span><div class="h2-row"><h2>お客様の声</h2><img class="spot-ill" src="assets/spot-voice.jpg" alt="" width="480" height="480" loading="lazy"></div><div class="bar"></div><p>Google口コミでいただいた評価が、当店のいちばんの実績です。</p></div>
+      <div class="voice-agg">
+        <div class="va-stars">★★★★★</div>
+        <div class="va-score">5.0 <small>／ 口コミ 450件</small></div>
+        <p>※ Googleビジネスプロフィールの口コミ実績です。</p>
+      </div>
+      <div class="voices">
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">m さん</p><p class="v-body">年末にエアコンクリーニングをお願いしました。仲里さんという方が担当してくれたのですが、1Kでペットが居るという事も配慮して作業して下さり、とても助かりました。今回こちらでクリーニングをお願いする半年前にも違う業者様にお願いしましたが、その時より外せる部品も外して掃除して下さり、早くて丁寧でとても良かったです。…まだとても綺麗なままですが、また汚れてきたらお願いしたいと思っています！ありがとうございました。</p></div>
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">catuxa さん</p><p class="v-body">エアコンと室外機とドレーンのクリーニングをお願いしました。お電話の対応から当日の対応もとても丁寧でした。作業の手順も一つ一つ説明して下さり、使用したお風呂場（排水溝も）やトイレまでとても綺麗にお掃除して下さり恐縮でした。…エアコンも室外機もドレーンも見違えるようにピカピカになり、これからの季節に気持ち良くエアコンが使えるようになって嬉しいです。お掃除機能付きでこのお値段はとても安くてビックリです。担当して下さった望月さんありがとうございました。また是非お願いしたいです。</p></div>
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">森あゆみ さん</p><p class="v-body">時間に余裕のある家庭だったのもあり時間より早めに来られて作業にあたってくださりました。担当は宮脇さんという方です。お掃除機能付きエアコンだったのですがリビングに置いていたということもあって油汚れとカビがたくさん生えてしまっていたようですがすっかり綺麗になりました。…仕上がりはやり残しなども見られず新品のエアコンに戻った気分です。エアコンの手入れの豆知識を教えてくだしったり、小さな子どもが在宅していましたが声かけなども優しくまたお願いしたいなと思いました。ありがとうございました！</p></div>
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">sachi akiba さん</p><p class="v-body">ミツモアで依頼し、数ある中から価格がお安く、口コミ評価の高いこちらに依頼。和田さんという爽やかな男性が作業しに来てくださいました。子供にも優しく、手際良く作業してくれましたし、作業前と後の汚れの違いを3台全て写真や動画で確認させていただけて、いかに汚れがついていたかがよくわかりました。…エアコンだけでなく、部品の洗浄に使ったお風呂場の換気扇や排水溝も綺麗にしていただけて、大満足の初☆エアコン業者清掃でした。</p></div>
+        <div class="voice"><div class="stars">★★★★★</div><p class="who">大久保美和 さん</p><p class="v-body">9年間そのままだったエアコンクリーニングをして頂きました。タバコを良く吸う事務所でエアコンはヤニとカビまみれでしたが、新品になったかの様に綺麗にピカピカになりました。お値段もお安くて良いです。後、アドバイザー池田さんのハキハキとした説明、作業の手際の良さ、とても良かったです。ありがとうございました。</p></div>
+      </div>
+      <p class="voice-src">※ Googleマップの口コミより抜粋（原文のまま掲載し、長文は文の切れ目で省略して「…」を付けています）</p>
+  </section>
+
+  <!-- 現場レポート -->
+  <section class="block">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M9 10h6M9 14h6M9 18h4"/></svg>日々の施工記録</span><h2>現場レポート</h2><div class="bar"></div><p>日々の施工の記録です。作業前後の写真とあわせて、順次掲載していきます。</p></div>
+      <div class="reports">
+        <article class="report">
+          <p class="r-meta"><span class="r-date">2026年10月</span><span class="r-area">大阪市</span></p>
+          <h3>壁掛けエアコン（お掃除機能付き）2台</h3>
+          <p class="r-body">お掃除機能付きの壁掛けエアコン2台を、丁寧に分解して内部までしっかり洗浄しました。熱交換器や送風ファンに付着したカビとホコリを高圧洗浄で洗い流し、作業前後の写真で仕上がりをご確認いただきました。</p>
+        </article>
+        <article class="report">
+          <p class="r-meta"><span class="r-date">2026年10月</span><span class="r-area">千葉市</span></p>
+          <h3>壁掛けエアコン1台＋室外機</h3>
+          <p class="r-body">壁掛けエアコン1台の通常分解洗浄と、室外機の清掃を行いました。外したカバーやフィルターなどのパーツは、お風呂場をお借りして1点ずつ丁寧に洗浄しています。</p>
+        </article>
+        <article class="report">
+          <p class="r-meta"><span class="r-date">2026年10月</span><span class="r-area">名古屋市</span></p>
+          <h3>壁掛けエアコン3台</h3>
+          <p class="r-body">壁掛けエアコン3台を分解洗浄し、仕上げに防カビ・抗菌コートを追加しました。本体を丁寧に拭き上げたあと、乾燥運転で内部の水分を飛ばして完了です。</p>
+        </article>
+      </div>
+  </section>
+
+  <!-- 作業の流れ -->
+  <section class="block">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h13M4 12h13M4 18h9"/><circle cx="20" cy="18" r="1" fill="currentColor"/></svg>当日の進み方</span><h2>作業の流れ</h2><div class="bar"></div><p>お部屋を汚さないよう、養生を徹底してから作業に入ります。</p></div>
+      <ol class="flow">
+        <li><img src="assets/person-area.jpg" alt="エアコン周辺をブルーシートで養生するスタッフ" loading="lazy" /><span class="num">1</span><h3>養生</h3><p>エアコン周辺をブルーシートやビニールでしっかり覆います。</p></li>
+        <li><img src="assets/person-disassemble.jpg" alt="エアコンの外装カバーを外して分解するスタッフ" loading="lazy" /><span class="num">2</span><h3>動作確認・分解</h3><p>運転状態を確認してから、外装カバーやフィルターなどを丁寧に分解します。</p></li>
+        <li><img src="assets/person-cover.jpg" alt="エアコン本体に透明な養生カバーを装着するスタッフ" loading="lazy" /><span class="num">3</span><h3>本体の養生</h3><p>電装部分に水がかからないよう、本体をビニール（マスカー）で念入りに覆います。</p></li>
+        <li><img src="assets/person-parts.jpg" alt="お風呂場で分解したパーツを洗浄するスタッフ" loading="lazy" /><span class="num">4</span><h3>パーツ洗浄</h3><p>分解したパーツは、水栓のある場所をお借りして洗浄します。</p></li>
+        <li><img src="assets/person-wash.jpg" alt="養生カバーの中でエアコン内部を高圧洗浄するスタッフ" loading="lazy" /><span class="num">5</span><h3>本体内部の高圧洗浄</h3><p>エコ洗剤を散布し、高圧洗浄機で熱交換器・送風口・ファン・ドレンパンを洗い流します。</p></li>
+        <li><img src="assets/person-assemble.jpg" alt="洗浄したパーツをエアコン本体に組み立てるスタッフ" loading="lazy" /><span class="num">6</span><h3>組み立て</h3><p>パーツの水気を拭き取り、元どおりに組み立てます。</p></li>
+        <li><img src="assets/person-wipe.jpg" alt="洗浄後のエアコン本体を緑色のクロスで拭き上げるスタッフ" loading="lazy" /><span class="num">7</span><h3>拭き上げ・乾燥</h3><p>本体を拭き上げ、暖房運転で内部を乾燥させて完了です。</p></li>
+      </ol>
+  </section>
+
+  <!-- 研修 -->
+  <section class="block">
+      <div class="training-strip">
+        <img src="assets/training-clean.jpg" alt="エアコンを前に説明する講師と、研修を受けるスタッフの様子" loading="lazy" />
+        <div class="t-body">
+          <h3>全スタッフが研修を受けています</h3>
+          <p>技術だけでなく、気配りや心遣いも大切に指導。独自の研修プログラムで、どのエリアでも同じ仕上がりの基準をそろえています。</p>
+        </div>
+      </div>
+  </section>
+
+  <!-- 代表紹介 -->
+  <section class="block soft">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.4 3.9-5.2 7.5-5.2s6.6 1.8 7.5 5.2"/></svg>代表あいさつ</span><h2>代表紹介</h2><div class="bar"></div><p>お客様のもとへは、各エリアの現地スタッフがお伺いします。仕上がりの基準と対応の質は、代表が責任を持ってそろえています。</p></div>
+      <div class="rep-card">
+        <img src="assets/rep-taoka.jpg" alt="リビングで赤ちゃんを抱っこする代表 田岡の写真" />
+        <div style="flex:1;min-width:240px">
+          <h3>代表 田岡隆博</h3>
+          <p>妻と子ども2人、孫、そして猫5匹と暮らす愛猫家。「自分の家族が暮らす部屋の空気をキレイにするつもりで」を合言葉に、洗剤選びから仕上げまで妥協しません。ペットと暮らすご家庭のエアコンの汚れ具合は、身をもって分かっているつもりです。</p>
+        </div>
+      </div>
+      <p>当店は兵庫県川西市に本部を置き、関東・関西・東海・九州の各対応エリアに現地スタッフが在籍しています。どのエリアでも遠方から出張する形ではなく、お近くのスタッフがお伺いしますので、ご自宅の近くにいる担当者が訪問する安心感があります。</p>
+      <p>Googleビジネスプロフィールでは、口コミ450件・評価5.0をいただいています。日々のご依頼と口コミに支えられて、各対応エリアでサービスを続けています。</p>
+      <p class="area-note">各エリアへは、お近くの現地スタッフがお伺いします。高難度機種や天井埋め込み型のご相談も承っています。</p>
+  </section>
+
+  <!-- 安心セクション -->
+  <section class="block soft">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>ご利用前の確認</span><h2>ご依頼前の不安にお答えします</h2><div class="bar"></div><p>料金の支払いタイミングから、対応できない機種まで、先に明示します。</p></div>
+      <figure class="illust-accent"><img src="assets/relax3.jpg" alt="笑顔のエアコンを指して説明するスタッフと、喜ぶお客様のイラスト" loading="lazy" /></figure>
+      <div class="relief-grid">
+        <div class="relief">
+          <div class="r-head"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg></div><h3>お支払いは作業完了後</h3></div>
+          <p>お支払いは作業が終わってからで大丈夫です。現金・クレジットカード・PayPay等に対応しています。前金はいただきません。</p>
+        </div>
+        <div class="relief">
+          <div class="r-head"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 3v6h-6"/></svg></div><h3>作業後の再施工対応</h3></div>
+          <p>作業後にニオイや汚れなど気になる点がありましたら、アフターサポートとして再施工で対応いたします。気づいた時点でお電話ください。</p>
+        </div>
+        <div class="relief">
+          <div class="r-head"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>損害保険に加入済み</h3></div>
+          <p>万が一の事故や破損に備え、損害保険に加入しています。大切なお部屋と家電をお預かりする仕事だからこその備えです。</p>
+        </div>
+        <div class="relief">
+          <div class="r-head"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.5 5.5l13 13"/></svg></div><h3>対応できない機種があります</h3></div>
+          <p>構造上の理由により、以下は対応いたしかねます。型番がご不明な場合はお電話でご相談ください。</p>
+          <ul>
+            <li>FUJITSU ノクリア AS-Xシリーズ</li>
+            <li>MITSUBISHI 霧ヶ峰アドバンス FZシリーズ</li>
+            <li>SHARP エアレストシリーズ</li>
+            <li>窓用エアコン／壁埋め込み型／幅90cm以上の大型エアコン</li>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+  <!-- 対応エリア -->
+  <section class="block">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>訪問エリア</span><div class="h2-row"><h2>対応エリア</h2><img class="spot-ill" src="assets/spot-area.jpg" alt="" width="480" height="480" loading="lazy"></div><div class="bar"></div><p id="areaLead">川西市を中心に、車で約60分圏内のエリアへお伺いします。</p></div>
+      <div class="kawanishi-banner">
+        <div>
+          <h3 id="areaBannerH">川西市にお住まいの方へ</h3>
+          <p id="areaBannerP">川西市を中心に、車で約60分圏内のエリアへ、お近くの現地スタッフがお伺いします。出張費込みの同一料金です。</p>
+        </div>
+      </div>
+      <div class="area-chips" id="areaChips">
+        <span class="center">川西市（中心）</span>
+        <span>伊丹市</span>
+        <span>宝塚市</span>
+        <span>西宮市</span>
+        <span>尼崎市</span>
+        <span>池田市</span>
+        <span>豊中市</span>
+        <span>箕面市</span>
+        <span>吹田市</span>
+        <span>川辺郡猪名川町</span>
+        <span>三田市</span>
+        <span>神戸市北区</span>
+      </div>
+      <p class="area-note" id="areaNote">※ 対応範囲は川西市を中心に車で約60分圏内が目安です。圏内でも一部対応できない地域があります。詳しくはお電話でご確認ください。</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block">
+      <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3A2.6 2.6 0 0 1 12 7.8c1.4 0 2.5 1 2.5 2.2 0 1.7-2.3 2-2.3 3.5"/><circle cx="12.2" cy="17" r=".4" fill="currentColor"/></svg>Q &amp; A</span><div class="h2-row"><h2>よくある質問</h2><img class="spot-ill" src="assets/spot-faq.jpg" alt="" width="480" height="480" loading="lazy"></div><div class="bar"></div></div>
+      <div class="faq">
+        <details><summary><span class="q">Q</span>作業にはどれくらい時間がかかりますか？</summary><div class="a">1台あたり1〜2時間が目安です。台数やお掃除機能の有無によって前後しますので、複数台の場合はご予約時にお伝えください。</div></details>
+        <details><summary><span class="q">Q</span>赤ちゃんやペットがいても大丈夫ですか？</summary><div class="a">当店ではエコ洗剤を使用しており、刺激臭や洗剤残りもほとんどありません。作業中は、別の部屋でお待ちいただけるとより安心です。</div></details>
+        <details><summary><span class="q">Q</span>支払い方法を教えてください。</summary><div class="a">現金・クレジットカード・PayPay等に対応しています。作業完了後のお支払いです。</div></details>
+        <details><summary><span class="q">Q</span>対応できないエアコンはありますか？</summary><div class="a">一部の機種（FUJITSU ノクリア AS-Xシリーズ、MITSUBISHI 霧ヶ峰アドバンス FZシリーズ、SHARP エアレストシリーズ、窓用エアコン、壁埋め込み型、幅90cm以上の大型エアコン）は構造上の理由により対応いたしかねます。ご不明な場合はお電話でご相談ください。</div></details>
+        <details><summary><span class="q">Q</span>作業後に不具合があったらどうなりますか？</summary><div class="a">アフターサポートとして再施工で対応いたします。また、損害保険にも加入済みですので、安心してお任せください。</div></details>
+      </div>
+  </section>
+
+  <!-- 予約 -->
+  <section class="block" id="bookingKw">
+      <div class="booking">
+        <h2>ご予約の流れ</h2>
+        <p class="b-sub">ご予約はお問い合わせフォームから承っています。お電話でも大丈夫です。</p>
+        <ol>
+          <li><strong>フォーム（またはお電話）でご予約</strong>：台数とご希望日をお知らせください</li>
+          <li><strong>日程の調整</strong>：ご予約から3営業日以内にご連絡し、訪問日時を確定します</li>
+          <li><strong>スタッフが訪問・作業</strong>：現地スタッフがお伺いし、1台あたり1〜2時間ほどで作業します</li>
+        </ol>
+        <p style="margin:0;font-size:14px;font-weight:700;text-align:center">訪問時間帯はこちらからお選びいただけます</p>
+        <div class="time-slots">
+          <span>午前 8〜9時 到着</span><span>午後 12〜14時</span><span>夕方 15〜18時</span><span>夜 18〜21時</span>
+        </div>
+        <a class="big-form" href="https://6qj22.hp.peraichi.com/" target="_blank" rel="noopener"><small>ご予約・ご相談はこちら</small><span class="bf-main">フォームで予約・相談</span></a>
+        <a class="big-tel" href="tel:09038397267"><small>お電話はこちら（毎日 8:00〜21:00）</small><span class="num">090-3839-7267</span></a>
+      </div>
+  </section>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p class="f-logo"><img src="assets/logo.png" alt="たすかるエアコンお掃除専門店" width="400" height="113" loading="lazy" /></p>
+    <p class="f-name">たすかるエアコンお掃除専門店</p>
+    <p>本部：兵庫県川西市 ／ 電話：090-3839-7267 ／ 営業時間：毎日 8:00〜21:00</p>
+    <p>対応エリア：関東・関西・東海・九州の一部（お近くの現地スタッフがお伺いします）</p>
+    <p class="proto-note">このページは新サイトの試作（プロトタイプ）です。写真は実写真を使用し、口コミ欄は実在の声を差し込むための枠です。予約・お問い合わせは現行のお問い合わせフォーム（ペライチ）にリンクしています。現行サイト：tasukaruaircon.net（ドメインは移行時も維持する想定）</p>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="form-link" href="https://6qj22.hp.peraichi.com/" target="_blank" rel="noopener">フォームで予約・相談</a>
+  <a class="call" href="tel:09038397267">電話 090-3839-7267</a>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  /* 全268エリア（採用LP tasukaru-recruit と同一キー・同一エリア） */
+  var AREAS = {
+"a0_0":{"n":"千代田区","p":"東京都","nb":["文京区", "中央区", "台東区", "墨田区", "荒川区", "江東区", "北区", "板橋区", "葛飾区", "足立区", "江戸川区", "川口市"]},
+"a0_1":{"n":"中央区","p":"東京都","nb":["千代田区", "江東区", "文京区", "台東区", "墨田区", "荒川区", "江戸川区", "北区", "葛飾区", "板橋区", "浦安市", "足立区"]},
+"a0_2":{"n":"文京区","p":"東京都","nb":["千代田区", "台東区", "荒川区", "中央区", "墨田区", "北区", "板橋区", "江東区", "足立区", "葛飾区", "江戸川区", "川口市"]},
+"a0_3":{"n":"台東区","p":"東京都","nb":["墨田区", "荒川区", "文京区", "千代田区", "中央区", "江東区", "北区", "葛飾区", "足立区", "板橋区", "江戸川区", "川口市"]},
+"a0_4":{"n":"墨田区","p":"東京都","nb":["台東区", "荒川区", "江東区", "文京区", "千代田区", "中央区", "葛飾区", "江戸川区", "足立区", "北区", "板橋区", "浦安市"]},
+"a0_5":{"n":"江戸川区","p":"東京都","nb":["葛飾区", "江東区", "墨田区", "市川市", "浦安市", "台東区", "荒川区", "足立区", "松戸市", "中央区", "船橋市", "文京区"]},
+"a0_6":{"n":"江東区","p":"東京都","nb":["中央区", "墨田区", "台東区", "江戸川区", "千代田区", "文京区", "荒川区", "浦安市", "葛飾区", "足立区", "北区", "市川市"]},
+"a0_7":{"n":"荒川区","p":"東京都","nb":["台東区", "墨田区", "文京区", "足立区", "北区", "千代田区", "葛飾区", "板橋区", "中央区", "江東区", "江戸川区", "川口市"]},
+"a0_8":{"n":"板橋区","p":"東京都","nb":["北区", "文京区", "川口市", "荒川区", "千代田区", "台東区", "戸田市", "足立区", "墨田区", "和光市", "中央区", "朝霞市"]},
+"a0_9":{"n":"足立区","p":"東京都","nb":["荒川区", "葛飾区", "草加市", "八潮市", "北区", "墨田区", "台東区", "川口市", "三郷市", "文京区", "松戸市", "板橋区"]},
+"a0_10":{"n":"葛飾区","p":"東京都","nb":["江戸川区", "足立区", "墨田区", "荒川区", "台東区", "松戸市", "市川市", "江東区", "八潮市", "文京区", "三郷市", "千代田区"]},
+"a0_11":{"n":"北区","p":"東京都","nb":["板橋区", "荒川区", "文京区", "台東区", "川口市", "千代田区", "足立区", "墨田区", "戸田市", "中央区", "葛飾区", "草加市"]},
+"a0_12":{"n":"町田市","p":"東京都","nb":["大和市", "相模原市", "座間市", "海老名市", "愛甲郡", "綾瀬市", "厚木市", "高座郡", "伊勢原市", "横浜市", "川崎市", "藤沢市"]},
+"a1_0":{"n":"横浜市","p":"神奈川県","nb":["川崎市", "大和市", "藤沢市", "綾瀬市", "町田市", "座間市", "海老名市", "高座郡", "茅ヶ崎市", "厚木市", "富津市", "木更津市"]},
+"a1_1":{"n":"川崎市","p":"神奈川県","nb":["横浜市", "中央区", "千代田区", "江東区", "文京区", "台東区", "墨田区", "大和市", "浦安市", "町田市", "荒川区", "板橋区"]},
+"a1_2":{"n":"相模原市","p":"神奈川県","nb":["町田市", "愛甲郡", "座間市", "大和市", "海老名市", "厚木市", "綾瀬市", "伊勢原市", "高座郡", "秦野市", "平塚市", "茅ヶ崎市"]},
+"a1_3":{"n":"平塚市","p":"神奈川県","nb":["茅ヶ崎市", "高座郡", "伊勢原市", "厚木市", "秦野市", "藤沢市", "海老名市", "綾瀬市", "座間市", "愛甲郡", "大和市", "町田市"]},
+"a1_4":{"n":"藤沢市","p":"神奈川県","nb":["茅ヶ崎市", "高座郡", "綾瀬市", "平塚市", "海老名市", "厚木市", "大和市", "伊勢原市", "横浜市", "座間市", "愛甲郡", "町田市"]},
+"a1_5":{"n":"茅ヶ崎市","p":"神奈川県","nb":["高座郡", "平塚市", "藤沢市", "伊勢原市", "綾瀬市", "海老名市", "厚木市", "座間市", "秦野市", "大和市", "愛甲郡", "町田市"]},
+"a1_6":{"n":"秦野市","p":"神奈川県","nb":["伊勢原市", "平塚市", "高座郡", "厚木市", "愛甲郡", "海老名市", "茅ヶ崎市", "綾瀬市", "座間市", "藤沢市", "大和市", "相模原市"]},
+"a1_7":{"n":"厚木市","p":"神奈川県","nb":["海老名市", "綾瀬市", "座間市", "伊勢原市", "愛甲郡", "高座郡", "大和市", "平塚市", "茅ヶ崎市", "町田市", "相模原市", "秦野市"]},
+"a1_8":{"n":"大和市","p":"神奈川県","nb":["座間市", "綾瀬市", "町田市", "海老名市", "厚木市", "相模原市", "愛甲郡", "高座郡", "伊勢原市", "藤沢市", "横浜市", "茅ヶ崎市"]},
+"a1_9":{"n":"座間市","p":"神奈川県","nb":["大和市", "海老名市", "綾瀬市", "厚木市", "町田市", "愛甲郡", "相模原市", "高座郡", "伊勢原市", "茅ヶ崎市", "平塚市", "藤沢市"]},
+"a1_10":{"n":"綾瀬市","p":"神奈川県","nb":["海老名市", "厚木市", "座間市", "大和市", "高座郡", "伊勢原市", "茅ヶ崎市", "愛甲郡", "藤沢市", "町田市", "平塚市", "相模原市"]},
+"a1_11":{"n":"伊勢原市","p":"神奈川県","nb":["厚木市", "高座郡", "平塚市", "海老名市", "秦野市", "茅ヶ崎市", "綾瀬市", "愛甲郡", "座間市", "大和市", "藤沢市", "相模原市"]},
+"a1_12":{"n":"海老名市","p":"神奈川県","nb":["厚木市", "綾瀬市", "座間市", "大和市", "高座郡", "愛甲郡", "伊勢原市", "町田市", "茅ヶ崎市", "平塚市", "相模原市", "藤沢市"]},
+"a1_13":{"n":"高座郡","p":"神奈川県","nb":["茅ヶ崎市", "平塚市", "伊勢原市", "綾瀬市", "厚木市", "海老名市", "藤沢市", "座間市", "大和市", "秦野市", "愛甲郡", "町田市"]},
+"a1_14":{"n":"愛甲郡","p":"神奈川県","nb":["厚木市", "座間市", "海老名市", "相模原市", "伊勢原市", "綾瀬市", "町田市", "大和市", "高座郡", "秦野市", "平塚市", "茅ヶ崎市"]},
+"a2_0":{"n":"さいたま市","p":"埼玉県","nb":["戸田市", "朝霞市", "川口市", "和光市", "新座市", "ふじみ野市", "蓮田市", "越谷市", "板橋区", "上尾市", "北区", "草加市"]},
+"a2_1":{"n":"川越市","p":"埼玉県","nb":["ふじみ野市", "坂戸市", "鶴ヶ島市", "狭山市", "桶川市", "上尾市", "北本市", "入間市", "日高市", "所沢市", "北足立郡", "東松山市"]},
+"a2_2":{"n":"熊谷市","p":"埼玉県","nb":["行田市", "深谷市", "東松山市", "比企郡", "鴻巣市", "羽生市", "大里郡", "北本市", "加須市", "本庄市", "坂戸市", "桶川市"]},
+"a2_3":{"n":"川口市","p":"埼玉県","nb":["戸田市", "北区", "板橋区", "草加市", "足立区", "さいたま市", "荒川区", "八潮市", "越谷市", "和光市", "文京区", "台東区"]},
+"a2_4":{"n":"行田市","p":"埼玉県","nb":["熊谷市", "羽生市", "鴻巣市", "東松山市", "加須市", "北本市", "比企郡", "深谷市", "桶川市", "久喜市", "坂戸市", "北足立郡"]},
+"a2_5":{"n":"秩父市","p":"埼玉県","nb":["秩父郡", "大里郡", "入間郡", "比企郡", "日高市", "飯能市", "鶴ヶ島市", "深谷市", "東松山市", "坂戸市", "本庄市", "児玉郡"]},
+"a2_6":{"n":"所沢市","p":"埼玉県","nb":["狭山市", "入間市", "新座市", "ふじみ野市", "朝霞市", "和光市", "川越市", "飯能市", "鶴ヶ島市", "日高市", "さいたま市", "坂戸市"]},
+"a2_7":{"n":"飯能市","p":"埼玉県","nb":["日高市", "入間市", "狭山市", "入間郡", "鶴ヶ島市", "坂戸市", "所沢市", "川越市", "ふじみ野市", "東松山市", "比企郡", "新座市"]},
+"a2_8":{"n":"加須市","p":"埼玉県","nb":["羽生市", "久喜市", "鴻巣市", "幸手市", "行田市", "北本市", "白岡市", "桶川市", "北足立郡", "南埼玉郡", "上尾市", "蓮田市"]},
+"a2_9":{"n":"草加市","p":"埼玉県","nb":["八潮市", "足立区", "三郷市", "越谷市", "吉川市", "川口市", "流山市", "松戸市", "葛飾区", "荒川区", "北区", "戸田市"]},
+"a2_10":{"n":"越谷市","p":"埼玉県","nb":["吉川市", "草加市", "八潮市", "三郷市", "春日部市", "野田市", "流山市", "川口市", "足立区", "戸田市", "さいたま市", "蓮田市"]},
+"a2_11":{"n":"本庄市","p":"埼玉県","nb":["児玉郡", "深谷市", "大里郡", "熊谷市", "比企郡", "行田市", "東松山市", "秩父市", "秩父郡", "羽生市", "鴻巣市", "入間郡"]},
+"a2_12":{"n":"狭山市","p":"埼玉県","nb":["入間市", "所沢市", "飯能市", "日高市", "鶴ヶ島市", "ふじみ野市", "川越市", "坂戸市", "入間郡", "新座市", "朝霞市", "和光市"]},
+"a2_13":{"n":"羽生市","p":"埼玉県","nb":["加須市", "行田市", "鴻巣市", "熊谷市", "北本市", "久喜市", "桶川市", "幸手市", "東松山市", "北足立郡", "白岡市", "上尾市"]},
+"a2_14":{"n":"鴻巣市","p":"埼玉県","nb":["北本市", "桶川市", "行田市", "東松山市", "加須市", "北足立郡", "上尾市", "羽生市", "久喜市", "熊谷市", "坂戸市", "白岡市"]},
+"a2_15":{"n":"深谷市","p":"埼玉県","nb":["本庄市", "熊谷市", "大里郡", "児玉郡", "比企郡", "行田市", "東松山市", "羽生市", "鴻巣市", "入間郡", "秩父市", "坂戸市"]},
+"a2_16":{"n":"上尾市","p":"埼玉県","nb":["北足立郡", "桶川市", "蓮田市", "北本市", "白岡市", "川越市", "久喜市", "鴻巣市", "ふじみ野市", "南埼玉郡", "さいたま市", "春日部市"]},
+"a2_17":{"n":"戸田市","p":"埼玉県","nb":["川口市", "さいたま市", "和光市", "朝霞市", "板橋区", "北区", "新座市", "草加市", "足立区", "越谷市", "荒川区", "文京区"]},
+"a2_18":{"n":"入間市","p":"埼玉県","nb":["狭山市", "飯能市", "所沢市", "日高市", "鶴ヶ島市", "ふじみ野市", "川越市", "坂戸市", "入間郡", "新座市", "朝霞市", "和光市"]},
+"a2_19":{"n":"朝霞市","p":"埼玉県","nb":["和光市", "新座市", "戸田市", "さいたま市", "所沢市", "ふじみ野市", "板橋区", "川口市", "北区", "川越市", "文京区", "狭山市"]},
+"a2_20":{"n":"和光市","p":"埼玉県","nb":["朝霞市", "新座市", "戸田市", "さいたま市", "板橋区", "川口市", "北区", "所沢市", "ふじみ野市", "文京区", "千代田区", "荒川区"]},
+"a2_21":{"n":"新座市","p":"埼玉県","nb":["朝霞市", "和光市", "所沢市", "ふじみ野市", "さいたま市", "戸田市", "板橋区", "川口市", "狭山市", "北区", "川越市", "入間市"]},
+"a2_22":{"n":"桶川市","p":"埼玉県","nb":["北本市", "上尾市", "北足立郡", "鴻巣市", "蓮田市", "白岡市", "川越市", "久喜市", "ふじみ野市", "加須市", "南埼玉郡", "坂戸市"]},
+"a2_23":{"n":"久喜市","p":"埼玉県","nb":["白岡市", "幸手市", "南埼玉郡", "北足立郡", "蓮田市", "北葛飾郡", "加須市", "上尾市", "桶川市", "春日部市", "北本市", "鴻巣市"]},
+"a2_24":{"n":"北本市","p":"埼玉県","nb":["桶川市", "鴻巣市", "上尾市", "北足立郡", "東松山市", "川越市", "久喜市", "蓮田市", "白岡市", "加須市", "坂戸市", "行田市"]},
+"a2_25":{"n":"八潮市","p":"埼玉県","nb":["三郷市", "草加市", "足立区", "流山市", "松戸市", "吉川市", "越谷市", "葛飾区", "川口市", "荒川区", "北区", "墨田区"]},
+"a2_26":{"n":"三郷市","p":"埼玉県","nb":["八潮市", "流山市", "松戸市", "草加市", "吉川市", "足立区", "葛飾区", "越谷市", "柏市", "市川市", "鎌ヶ谷市", "荒川区"]},
+"a2_27":{"n":"蓮田市","p":"埼玉県","nb":["北足立郡", "白岡市", "上尾市", "南埼玉郡", "春日部市", "久喜市", "桶川市", "北葛飾郡", "幸手市", "さいたま市", "北本市", "越谷市"]},
+"a2_28":{"n":"坂戸市","p":"埼玉県","nb":["鶴ヶ島市", "日高市", "川越市", "入間郡", "東松山市", "狭山市", "比企郡", "入間市", "飯能市", "ふじみ野市", "北本市", "桶川市"]},
+"a2_29":{"n":"幸手市","p":"埼玉県","nb":["久喜市", "南埼玉郡", "北葛飾郡", "白岡市", "春日部市", "蓮田市", "加須市", "北足立郡", "上尾市", "桶川市", "北本市", "野田市"]},
+"a2_30":{"n":"日高市","p":"埼玉県","nb":["入間郡", "鶴ヶ島市", "飯能市", "坂戸市", "狭山市", "入間市", "川越市", "東松山市", "ふじみ野市", "比企郡", "所沢市", "北本市"]},
+"a2_31":{"n":"吉川市","p":"埼玉県","nb":["越谷市", "流山市", "三郷市", "八潮市", "草加市", "野田市", "春日部市", "柏市", "松戸市", "足立区", "川口市", "葛飾区"]},
+"a2_32":{"n":"白岡市","p":"埼玉県","nb":["南埼玉郡", "蓮田市", "久喜市", "北足立郡", "北葛飾郡", "幸手市", "春日部市", "上尾市", "桶川市", "北本市", "加須市", "鴻巣市"]},
+"a2_33":{"n":"ふじみ野市","p":"埼玉県","nb":["川越市", "所沢市", "狭山市", "新座市", "朝霞市", "さいたま市", "入間市", "上尾市", "鶴ヶ島市", "和光市", "坂戸市", "桶川市"]},
+"a2_34":{"n":"鶴ヶ島市","p":"埼玉県","nb":["坂戸市", "日高市", "入間郡", "川越市", "狭山市", "入間市", "飯能市", "東松山市", "ふじみ野市", "比企郡", "北本市", "桶川市"]},
+"a2_35":{"n":"東松山市","p":"埼玉県","nb":["比企郡", "坂戸市", "鴻巣市", "鶴ヶ島市", "熊谷市", "北本市", "行田市", "入間郡", "桶川市", "川越市", "日高市", "上尾市"]},
+"a2_36":{"n":"春日部市","p":"埼玉県","nb":["北葛飾郡", "南埼玉郡", "蓮田市", "白岡市", "越谷市", "野田市", "幸手市", "北足立郡", "吉川市", "久喜市", "上尾市", "さいたま市"]},
+"a2_37":{"n":"北足立郡","p":"埼玉県","nb":["上尾市", "蓮田市", "桶川市", "白岡市", "久喜市", "北本市", "南埼玉郡", "鴻巣市", "春日部市", "北葛飾郡", "幸手市", "川越市"]},
+"a2_38":{"n":"南埼玉郡","p":"埼玉県","nb":["北葛飾郡", "白岡市", "春日部市", "幸手市", "久喜市", "蓮田市", "北足立郡", "上尾市", "桶川市", "野田市", "越谷市", "加須市"]},
+"a2_39":{"n":"北葛飾郡","p":"埼玉県","nb":["南埼玉郡", "春日部市", "幸手市", "白岡市", "久喜市", "蓮田市", "北足立郡", "野田市", "越谷市", "上尾市", "吉川市", "桶川市"]},
+"a2_40":{"n":"比企郡","p":"埼玉県","nb":["東松山市", "熊谷市", "入間郡", "坂戸市", "大里郡", "鶴ヶ島市", "行田市", "深谷市", "日高市", "鴻巣市", "北本市", "川越市"]},
+"a2_41":{"n":"秩父郡","p":"埼玉県","nb":["秩父市", "大里郡", "入間郡", "比企郡", "児玉郡", "本庄市", "深谷市", "日高市", "飯能市", "東松山市", "鶴ヶ島市", "坂戸市"]},
+"a2_42":{"n":"児玉郡","p":"埼玉県","nb":["本庄市", "深谷市", "大里郡", "熊谷市", "比企郡", "秩父郡", "秩父市", "行田市", "東松山市", "羽生市", "入間郡"]},
+"a2_43":{"n":"大里郡","p":"埼玉県","nb":["深谷市", "比企郡", "本庄市", "児玉郡", "秩父市", "熊谷市", "秩父郡", "東松山市", "入間郡", "行田市", "坂戸市", "日高市"]},
+"a2_44":{"n":"入間郡","p":"埼玉県","nb":["日高市", "鶴ヶ島市", "坂戸市", "飯能市", "比企郡", "狭山市", "東松山市", "入間市", "川越市", "ふじみ野市", "秩父市", "所沢市"]},
+"chibashi":{"n":"千葉市","p":"千葉県","nb":["市原市", "四街道市", "佐倉市", "八千代市", "習志野市", "船橋市", "東金市", "大網白里市", "茂原市"]},
+"ichikawa":{"n":"市川市","p":"千葉県","nb":["船橋市", "浦安市", "松戸市", "鎌ケ谷市", "千葉市", "東京都（江戸川区・葛飾区）", "習志野市", "八千代市"]},
+"funabashi":{"n":"船橋市","p":"千葉県","nb":["千葉市", "市川市", "浦安市", "習志野市", "八千代市", "鎌ケ谷市", "白井市", "佐倉市", "松戸市"]},
+"a3_3":{"n":"松戸市","p":"千葉県","nb":["三郷市", "市川市", "八潮市", "葛飾区", "流山市", "鎌ヶ谷市", "足立区", "江戸川区", "草加市", "柏市", "荒川区", "墨田区"]},
+"a3_4":{"n":"浦安市","p":"千葉県","nb":["江戸川区", "江東区", "船橋市", "市川市", "墨田区", "葛飾区", "習志野市", "中央区", "台東区", "荒川区", "千代田区", "文京区"]},
+"a3_5":{"n":"茂原市","p":"千葉県","nb":["長生郡", "大網白里市", "東金市", "市原市", "夷隅郡", "いすみ市", "山武市", "千葉市", "八街市", "四街道市", "袖ヶ浦市", "勝浦市"]},
+"a3_6":{"n":"佐倉市","p":"千葉県","nb":["四街道市", "成田市", "八街市", "富里市", "八千代市", "印旛郡", "印西市", "千葉市", "白井市", "習志野市", "鎌ヶ谷市", "山武市"]},
+"a3_7":{"n":"東金市","p":"千葉県","nb":["大網白里市", "山武市", "八街市", "茂原市", "山武郡", "富里市", "長生郡", "四街道市", "佐倉市", "市原市", "千葉市", "成田市"]},
+"a3_8":{"n":"山武市","p":"千葉県","nb":["東金市", "山武郡", "八街市", "大網白里市", "富里市", "匝瑳市", "成田市", "佐倉市", "茂原市", "四街道市", "長生郡", "旭市"]},
+"a3_9":{"n":"市原市","p":"千葉県","nb":["千葉市", "袖ヶ浦市", "茂原市", "大網白里市", "四街道市", "習志野市", "木更津市", "東金市", "船橋市", "八千代市", "浦安市", "八街市"]},
+"a3_10":{"n":"八街市","p":"千葉県","nb":["富里市", "佐倉市", "山武市", "成田市", "東金市", "四街道市", "大網白里市", "山武郡", "千葉市", "八千代市", "印旛郡", "匝瑳市"]},
+"a3_11":{"n":"印西市","p":"千葉県","nb":["印旛郡", "白井市", "我孫子市", "八千代市", "佐倉市", "鎌ヶ谷市", "柏市", "成田市", "四街道市", "習志野市", "船橋市", "富里市"]},
+"a3_12":{"n":"白井市","p":"千葉県","nb":["鎌ヶ谷市", "我孫子市", "八千代市", "印西市", "柏市", "習志野市", "船橋市", "市川市", "松戸市", "流山市", "佐倉市", "三郷市"]},
+"a3_13":{"n":"富里市","p":"千葉県","nb":["成田市", "八街市", "佐倉市", "山武市", "印旛郡", "山武郡", "四街道市", "東金市", "匝瑳市", "印西市", "八千代市", "大網白里市"]},
+"a3_14":{"n":"匝瑳市","p":"千葉県","nb":["山武郡", "旭市", "山武市", "富里市", "香取市", "八街市", "成田市", "銚子市", "東金市", "大網白里市", "佐倉市", "印旛郡"]},
+"a3_15":{"n":"旭市","p":"千葉県","nb":["匝瑳市", "銚子市", "山武郡", "香取市", "山武市", "富里市", "成田市", "八街市", "東金市"]},
+"a3_16":{"n":"いすみ市","p":"千葉県","nb":["夷隅郡", "勝浦市", "長生郡", "茂原市", "大網白里市", "鴨川市", "東金市", "市原市"]},
+"a3_17":{"n":"野田市","p":"千葉県","nb":["吉川市", "越谷市", "春日部市", "流山市", "北葛飾郡", "柏市", "三郷市", "八潮市", "草加市", "南埼玉郡", "我孫子市", "松戸市"]},
+"a3_18":{"n":"流山市","p":"千葉県","nb":["三郷市", "柏市", "八潮市", "吉川市", "松戸市", "草加市", "越谷市", "野田市", "我孫子市", "鎌ヶ谷市", "足立区", "葛飾区"]},
+"a3_19":{"n":"銚子市","p":"千葉県","nb":["旭市", "匝瑳市", "山武郡", "香取市"]},
+"a3_20":{"n":"鴨川市","p":"千葉県","nb":["南房総市", "夷隅郡", "勝浦市", "館山市", "君津市", "いすみ市", "富津市", "木更津市", "袖ヶ浦市"]},
+"a3_21":{"n":"館山市","p":"千葉県","nb":["南房総市", "鴨川市", "富津市", "君津市"]},
+"a3_22":{"n":"富津市","p":"千葉県","nb":["君津市", "木更津市", "袖ヶ浦市", "横浜市", "南房総市", "川崎市", "鴨川市", "市原市", "藤沢市", "館山市", "夷隅郡"]},
+"a3_23":{"n":"成田市","p":"千葉県","nb":["富里市", "印旛郡", "佐倉市", "八街市", "印西市", "四街道市", "八千代市", "山武郡", "山武市", "香取市", "匝瑳市", "白井市"]},
+"a3_24":{"n":"香取市","p":"千葉県","nb":["成田市", "匝瑳市", "富里市", "印旛郡", "旭市", "山武郡", "八街市", "佐倉市", "印西市", "山武市", "銚子市"]},
+"a3_25":{"n":"柏市","p":"千葉県","nb":["我孫子市", "流山市", "鎌ヶ谷市", "三郷市", "松戸市", "白井市", "吉川市", "野田市", "八潮市", "市川市", "印西市", "草加市"]},
+"a3_26":{"n":"君津市","p":"千葉県","nb":["富津市", "木更津市", "袖ヶ浦市", "市原市", "横浜市", "川崎市", "鴨川市", "南房総市", "夷隅郡", "浦安市", "千葉市", "茂原市"]},
+"a3_27":{"n":"勝浦市","p":"千葉県","nb":["夷隅郡", "いすみ市", "鴨川市", "長生郡", "茂原市", "南房総市"]},
+"a3_28":{"n":"印旛郡","p":"千葉県","nb":["印西市", "成田市", "佐倉市", "富里市", "白井市", "八千代市", "我孫子市", "四街道市", "八街市", "鎌ヶ谷市", "香取市", "柏市"]},
+"a3_29":{"n":"八千代市","p":"千葉県","nb":["習志野市", "白井市", "四街道市", "船橋市", "鎌ヶ谷市", "佐倉市", "印西市", "千葉市", "市川市", "我孫子市", "印旛郡", "松戸市"]},
+"a3_30":{"n":"鎌ヶ谷市","p":"千葉県","nb":["白井市", "市川市", "松戸市", "船橋市", "我孫子市", "柏市", "習志野市", "八千代市", "流山市", "三郷市", "江戸川区", "葛飾区"]},
+"a3_31":{"n":"木更津市","p":"千葉県","nb":["君津市", "袖ヶ浦市", "富津市", "市原市", "川崎市", "横浜市", "浦安市", "千葉市", "夷隅郡", "鴨川市", "茂原市", "江東区"]},
+"a3_32":{"n":"袖ヶ浦市","p":"千葉県","nb":["木更津市", "君津市", "市原市", "富津市", "千葉市", "浦安市", "川崎市", "習志野市", "横浜市", "船橋市", "江東区", "茂原市"]},
+"a3_33":{"n":"南房総市","p":"千葉県","nb":["館山市", "鴨川市", "富津市", "君津市", "木更津市", "夷隅郡", "勝浦市"]},
+"a3_34":{"n":"四街道市","p":"千葉県","nb":["佐倉市", "千葉市", "八千代市", "習志野市", "八街市", "船橋市", "富里市", "白井市", "成田市", "印西市", "市原市", "鎌ヶ谷市"]},
+"a3_35":{"n":"習志野市","p":"千葉県","nb":["船橋市", "八千代市", "市川市", "千葉市", "鎌ヶ谷市", "浦安市", "白井市", "四街道市", "江戸川区", "松戸市", "葛飾区", "佐倉市"]},
+"a3_36":{"n":"大網白里市","p":"千葉県","nb":["東金市", "茂原市", "山武市", "八街市", "長生郡", "市原市", "四街道市", "千葉市", "富里市", "山武郡", "佐倉市", "成田市"]},
+"a3_37":{"n":"山武郡","p":"千葉県","nb":["匝瑳市", "山武市", "旭市", "富里市", "八街市", "東金市", "成田市", "大網白里市", "香取市", "佐倉市", "銚子市", "四街道市"]},
+"a3_38":{"n":"長生郡","p":"千葉県","nb":["茂原市", "いすみ市", "大網白里市", "夷隅郡", "東金市", "勝浦市", "山武市", "市原市", "八街市", "山武郡", "千葉市", "四街道市"]},
+"a3_39":{"n":"夷隅郡","p":"千葉県","nb":["勝浦市", "いすみ市", "長生郡", "鴨川市", "茂原市", "市原市", "大網白里市", "君津市", "木更津市", "袖ヶ浦市", "富津市", "南房総市"]},
+"a3_40":{"n":"我孫子市","p":"千葉県","nb":["柏市", "白井市", "鎌ヶ谷市", "印西市", "流山市", "松戸市", "三郷市", "八千代市", "市川市", "野田市", "吉川市", "八潮市"]},
+"osaka":{"n":"大阪市","p":"大阪府","nb":["吹田市", "豊中市", "守口市", "門真市", "大東市", "東大阪市", "八尾市", "堺市", "松原市", "摂津市", "尼崎市"]},
+"toyonaka":{"n":"豊中市","p":"大阪府","nb":["吹田市", "池田市", "箕面市", "大阪市", "尼崎市", "伊丹市", "川西市", "茨木市"]},
+"a4_2":{"n":"池田市","p":"大阪府","nb":["川西市", "箕面市", "伊丹市", "豊中市", "宝塚市", "川辺郡", "尼崎市", "吹田市", "西宮市", "茨木市", "摂津市", "芦屋市"]},
+"suita":{"n":"吹田市","p":"大阪府","nb":["豊中市", "茨木市", "摂津市", "大阪市", "箕面市", "守口市", "池田市", "高槻市"]},
+"a4_4":{"n":"高槻市","p":"大阪府","nb":["枚方市", "茨木市", "三島郡", "交野市", "八幡市", "寝屋川市", "乙訓郡", "摂津市", "長岡京市", "久世郡", "四條畷市", "門真市"]},
+"a4_5":{"n":"守口市","p":"大阪府","nb":["門真市", "摂津市", "寝屋川市", "吹田市", "大東市", "四條畷市", "大阪市", "東大阪市", "茨木市", "豊中市", "枚方市", "交野市"]},
+"a4_6":{"n":"枚方市","p":"大阪府","nb":["交野市", "高槻市", "寝屋川市", "茨木市", "三島郡", "四條畷市", "八幡市", "摂津市", "門真市", "乙訓郡", "久世郡", "京田辺市"]},
+"a4_7":{"n":"茨木市","p":"大阪府","nb":["摂津市", "高槻市", "寝屋川市", "枚方市", "吹田市", "門真市", "守口市", "箕面市", "豊中市", "交野市", "四條畷市", "三島郡"]},
+"a4_8":{"n":"大東市","p":"大阪府","nb":["四條畷市", "門真市", "東大阪市", "守口市", "寝屋川市", "生駒市", "摂津市", "八尾市", "交野市", "吹田市", "大阪市", "枚方市"]},
+"a4_9":{"n":"箕面市","p":"大阪府","nb":["池田市", "川西市", "豊中市", "伊丹市", "吹田市", "茨木市", "摂津市", "宝塚市", "川辺郡", "尼崎市", "守口市", "高槻市"]},
+"a4_10":{"n":"寝屋川市","p":"大阪府","nb":["門真市", "摂津市", "四條畷市", "守口市", "茨木市", "大東市", "枚方市", "交野市", "吹田市", "高槻市", "東大阪市", "豊中市"]},
+"a4_11":{"n":"東大阪市","p":"大阪府","nb":["大東市", "八尾市", "門真市", "守口市", "四條畷市", "大阪市", "生駒市", "寝屋川市", "柏原市", "藤井寺市", "松原市", "摂津市"]},
+"a4_12":{"n":"四條畷市","p":"大阪府","nb":["大東市", "寝屋川市", "門真市", "交野市", "守口市", "生駒市", "摂津市", "枚方市", "東大阪市", "茨木市", "吹田市", "高槻市"]},
+"a4_13":{"n":"岸和田市","p":"大阪府","nb":["貝塚市", "泉北郡", "和泉市", "泉大津市", "泉南郡", "泉佐野市", "高石市", "泉南市", "堺市", "大阪狭山市", "阪南市", "河内長野市"]},
+"a4_14":{"n":"門真市","p":"大阪府","nb":["守口市", "寝屋川市", "摂津市", "大東市", "四條畷市", "吹田市", "東大阪市", "茨木市", "大阪市", "枚方市", "交野市", "豊中市"]},
+"a4_15":{"n":"摂津市","p":"大阪府","nb":["寝屋川市", "茨木市", "守口市", "吹田市", "門真市", "四條畷市", "豊中市", "枚方市", "大東市", "高槻市", "箕面市", "大阪市"]},
+"a4_16":{"n":"交野市","p":"大阪府","nb":["枚方市", "四條畷市", "寝屋川市", "高槻市", "京田辺市", "八幡市", "大東市", "門真市", "茨木市", "三島郡", "摂津市", "生駒市"]},
+"a4_17":{"n":"三島郡","p":"大阪府","nb":["乙訓郡", "八幡市", "長岡京市", "高槻市", "久世郡", "向日市", "枚方市", "交野市", "城陽市", "茨木市", "宇治市", "京田辺市"]},
+"a4_18":{"n":"豊能郡","p":"大阪府","nb":["川辺郡", "亀岡市", "南丹市", "川西市", "池田市", "箕面市", "船井郡", "三田市", "宝塚市", "丹波篠山市", "伊丹市", "豊中市"]},
+"a4_19":{"n":"貝塚市","p":"大阪府","nb":["岸和田市", "泉南郡", "泉佐野市", "泉北郡", "和泉市", "泉大津市", "泉南市", "高石市", "阪南市", "河内長野市", "堺市", "大阪狭山市"]},
+"a4_20":{"n":"八尾市","p":"大阪府","nb":["東大阪市", "柏原市", "藤井寺市", "松原市", "羽曳野市", "大東市", "北葛城郡", "大阪市", "生駒市", "生駒郡", "堺市", "守口市"]},
+"a4_21":{"n":"松原市","p":"大阪府","nb":["藤井寺市", "羽曳野市", "堺市", "柏原市", "八尾市", "大阪狭山市", "富田林市", "東大阪市", "南河内郡", "高石市", "大阪市", "香芝市"]},
+"a4_22":{"n":"和泉市","p":"大阪府","nb":["泉北郡", "泉大津市", "高石市", "岸和田市", "貝塚市", "泉南郡", "堺市", "泉佐野市", "大阪狭山市", "河内長野市", "松原市", "富田林市"]},
+"a4_23":{"n":"高石市","p":"大阪府","nb":["泉大津市", "和泉市", "泉北郡", "堺市", "岸和田市", "大阪狭山市", "貝塚市", "松原市", "富田林市", "河内長野市", "泉南郡", "藤井寺市"]},
+"a4_24":{"n":"富田林市","p":"大阪府","nb":["南河内郡", "大阪狭山市", "羽曳野市", "藤井寺市", "河内長野市", "柏原市", "葛城市", "松原市", "香芝市", "大和高田市", "堺市", "御所市"]},
+"a4_25":{"n":"河内長野市","p":"大阪府","nb":["富田林市", "大阪狭山市", "南河内郡", "橋本市", "和泉市", "葛城市", "五條市", "羽曳野市", "高石市", "伊都郡", "藤井寺市", "泉大津市"]},
+"a4_26":{"n":"泉佐野市","p":"大阪府","nb":["泉南郡", "貝塚市", "泉南市", "岸和田市", "阪南市", "泉北郡", "和泉市", "泉大津市", "高石市", "岩出市", "伊都郡", "河内長野市"]},
+"a4_27":{"n":"柏原市","p":"大阪府","nb":["藤井寺市", "羽曳野市", "八尾市", "松原市", "北葛城郡", "香芝市", "富田林市", "南河内郡", "生駒郡", "大阪狭山市", "東大阪市", "葛城市"]},
+"a4_28":{"n":"羽曳野市","p":"大阪府","nb":["藤井寺市", "柏原市", "松原市", "富田林市", "南河内郡", "大阪狭山市", "八尾市", "香芝市", "北葛城郡", "葛城市", "堺市", "生駒郡"]},
+"a4_29":{"n":"藤井寺市","p":"大阪府","nb":["羽曳野市", "柏原市", "松原市", "八尾市", "富田林市", "大阪狭山市", "南河内郡", "香芝市", "北葛城郡", "堺市", "東大阪市", "生駒郡"]},
+"a4_30":{"n":"泉大津市","p":"大阪府","nb":["泉北郡", "和泉市", "高石市", "岸和田市", "貝塚市", "堺市", "泉南郡", "泉佐野市", "大阪狭山市", "松原市", "河内長野市", "富田林市"]},
+"a4_31":{"n":"南河内郡","p":"大阪府","nb":["富田林市", "葛城市", "大阪狭山市", "羽曳野市", "香芝市", "藤井寺市", "河内長野市", "柏原市", "大和高田市", "御所市", "松原市", "北葛城郡"]},
+"a4_32":{"n":"泉南市","p":"大阪府","nb":["阪南市", "泉佐野市", "泉南郡", "貝塚市", "岩出市", "岸和田市", "泉北郡", "和歌山市", "和泉市", "泉大津市", "海草郡", "伊都郡"]},
+"a4_33":{"n":"泉北郡","p":"大阪府","nb":["泉大津市", "和泉市", "岸和田市", "高石市", "貝塚市", "泉南郡", "泉佐野市", "堺市", "大阪狭山市", "河内長野市", "松原市", "泉南市"]},
+"a4_34":{"n":"泉南郡","p":"大阪府","nb":["泉佐野市", "貝塚市", "岸和田市", "泉南市", "泉北郡", "和泉市", "泉大津市", "阪南市", "高石市", "岩出市", "伊都郡", "河内長野市"]},
+"a4_35":{"n":"阪南市","p":"大阪府","nb":["泉南市", "泉佐野市", "岩出市", "泉南郡", "和歌山市", "貝塚市", "岸和田市", "海草郡", "海南市", "泉北郡", "和泉市", "泉大津市"]},
+"a4_36":{"n":"堺市","p":"大阪府","nb":["松原市", "高石市", "大阪狭山市", "泉大津市", "藤井寺市", "和泉市", "羽曳野市", "泉北郡", "八尾市", "富田林市", "柏原市", "大阪市"]},
+"a4_37":{"n":"大阪狭山市","p":"大阪府","nb":["富田林市", "南河内郡", "羽曳野市", "松原市", "藤井寺市", "河内長野市", "堺市", "柏原市", "高石市", "和泉市", "泉大津市", "葛城市"]},
+"a5_0":{"n":"京都市","p":"京都府","nb":["向日市", "長岡京市", "乙訓郡", "宇治市", "久世郡", "八幡市", "三島郡", "亀岡市", "城陽市", "京田辺市", "高槻市", "枚方市"]},
+"a5_1":{"n":"向日市","p":"京都府","nb":["長岡京市", "乙訓郡", "三島郡", "八幡市", "久世郡", "京都市", "宇治市", "城陽市", "亀岡市", "高槻市", "枚方市", "京田辺市"]},
+"a5_2":{"n":"宇治市","p":"京都府","nb":["城陽市", "久世郡", "京田辺市", "八幡市", "乙訓郡", "向日市", "長岡京市", "三島郡", "京都市", "交野市", "枚方市", "高槻市"]},
+"a5_3":{"n":"亀岡市","p":"京都府","nb":["長岡京市", "向日市", "南丹市", "豊能郡", "乙訓郡", "三島郡", "京都市", "高槻市", "八幡市", "久世郡", "船井郡", "茨木市"]},
+"a5_4":{"n":"城陽市","p":"京都府","nb":["宇治市", "京田辺市", "久世郡", "八幡市", "乙訓郡", "三島郡", "交野市", "枚方市", "長岡京市", "向日市", "高槻市", "四條畷市"]},
+"a5_5":{"n":"八幡市","p":"京都府","nb":["久世郡", "乙訓郡", "三島郡", "長岡京市", "城陽市", "向日市", "宇治市", "枚方市", "京田辺市", "高槻市", "交野市", "茨木市"]},
+"a5_6":{"n":"南丹市","p":"京都府","nb":["船井郡", "亀岡市", "豊能郡", "丹波篠山市", "川辺郡", "向日市", "長岡京市", "綾部市", "京都市", "三島郡", "乙訓郡", "箕面市"]},
+"a5_7":{"n":"綾部市","p":"京都府","nb":["福知山市", "船井郡", "丹波市", "丹波篠山市", "南丹市"]},
+"a5_8":{"n":"乙訓郡","p":"京都府","nb":["長岡京市", "三島郡", "八幡市", "久世郡", "向日市", "高槻市", "城陽市", "宇治市", "枚方市", "京田辺市", "交野市", "京都市"]},
+"a5_9":{"n":"久世郡","p":"京都府","nb":["八幡市", "乙訓郡", "城陽市", "宇治市", "三島郡", "長岡京市", "京田辺市", "向日市", "枚方市", "交野市", "高槻市", "京都市"]},
+"a5_10":{"n":"船井郡","p":"京都府","nb":["南丹市", "豊能郡", "丹波篠山市", "綾部市", "亀岡市", "川辺郡", "福知山市", "向日市", "丹波市", "長岡京市", "三田市", "京都市"]},
+"a5_11":{"n":"長岡京市","p":"京都府","nb":["乙訓郡", "向日市", "三島郡", "八幡市", "久世郡", "高槻市", "宇治市", "城陽市", "枚方市", "京都市", "亀岡市", "京田辺市"]},
+"a5_12":{"n":"京田辺市","p":"京都府","nb":["城陽市", "久世郡", "宇治市", "交野市", "八幡市", "枚方市", "乙訓郡", "三島郡", "高槻市", "四條畷市", "奈良市", "生駒市"]},
+"a5_13":{"n":"福知山市","p":"京都府","nb":["綾部市", "丹波市", "丹波篠山市", "船井郡", "西脇市", "南丹市"]},
+"amagasaki":{"n":"尼崎市","p":"兵庫県","nb":["西宮市", "伊丹市", "豊中市", "大阪市", "神戸市（東灘区）", "芦屋市", "川西市", "吹田市"]},
+"nishinomiya":{"n":"西宮市","p":"兵庫県","nb":["芦屋市", "尼崎市", "神戸市（東灘区・灘区・北区）", "伊丹市", "宝塚市", "川西市", "三田市"]},
+"a6_2":{"n":"芦屋市","p":"兵庫県","nb":["西宮市", "尼崎市", "宝塚市", "神戸市", "伊丹市", "川西市", "池田市", "豊中市", "大阪市", "箕面市", "三田市", "川辺郡"]},
+"a6_3":{"n":"伊丹市","p":"兵庫県","nb":["宝塚市", "池田市", "川西市", "尼崎市", "豊中市", "西宮市", "箕面市", "吹田市", "芦屋市", "川辺郡", "大阪市", "摂津市"]},
+"a6_4":{"n":"宝塚市","p":"兵庫県","nb":["伊丹市", "川西市", "池田市", "西宮市", "尼崎市", "芦屋市", "豊中市", "箕面市", "川辺郡", "吹田市", "三田市", "大阪市"]},
+"kawanishi":{"n":"川西市","p":"兵庫県","nb":["伊丹市", "宝塚市", "西宮市", "尼崎市", "池田市", "豊中市", "箕面市", "吹田市", "川辺郡猪名川町", "三田市", "神戸市北区"]},
+"a6_6":{"n":"三田市","p":"兵庫県","nb":["川辺郡", "宝塚市", "川西市", "芦屋市", "伊丹市", "西宮市", "池田市", "豊能郡", "丹波篠山市", "神戸市", "加東市", "箕面市"]},
+"a6_7":{"n":"丹波市","p":"兵庫県","nb":["福知山市", "丹波篠山市", "西脇市", "綾部市", "加東市", "船井郡", "三田市", "小野市"]},
+"a6_8":{"n":"西脇市","p":"兵庫県","nb":["加東市", "小野市", "丹波市", "三木市", "丹波篠山市", "稲美郡", "三田市", "福知山市"]},
+"a6_9":{"n":"丹波篠山市","p":"兵庫県","nb":["丹波市", "船井郡", "三田市", "豊能郡", "南丹市", "川辺郡", "綾部市", "福知山市", "加東市", "西脇市", "川西市", "亀岡市"]},
+"a6_10":{"n":"川辺郡","p":"兵庫県","nb":["川西市", "池田市", "豊能郡", "宝塚市", "箕面市", "伊丹市", "三田市", "豊中市", "西宮市", "尼崎市", "茨木市", "芦屋市"]},
+"a6_11":{"n":"神戸市","p":"兵庫県","nb":["芦屋市", "西宮市", "明石市", "宝塚市", "尼崎市", "伊丹市", "三木市", "三田市", "川西市", "池田市", "稲美郡", "豊中市"]},
+"a6_12":{"n":"加東市","p":"兵庫県","nb":["小野市", "西脇市", "三木市", "稲美郡", "三田市", "丹波篠山市", "丹波市", "明石市", "神戸市", "芦屋市", "川辺郡", "宝塚市"]},
+"a6_13":{"n":"小野市","p":"兵庫県","nb":["加東市", "三木市", "稲美郡", "西脇市", "明石市", "三田市", "神戸市", "丹波篠山市", "芦屋市", "丹波市"]},
+"a6_14":{"n":"稲美郡","p":"兵庫県","nb":["三木市", "小野市", "明石市", "加東市", "神戸市", "西脇市", "三田市", "芦屋市"]},
+"a6_15":{"n":"明石市","p":"兵庫県","nb":["稲美郡", "三木市", "神戸市", "小野市", "芦屋市", "加東市", "西宮市", "三田市", "宝塚市"]},
+"a6_16":{"n":"三木市","p":"兵庫県","nb":["小野市", "稲美郡", "加東市", "明石市", "神戸市", "三田市", "西脇市", "芦屋市", "西宮市", "宝塚市", "川辺郡", "丹波篠山市"]},
+"a7_0":{"n":"奈良市","p":"奈良県","nb":["大和郡山市", "生駒市", "天理市", "生駒郡", "北葛城郡", "京田辺市", "磯城郡", "交野市", "四條畷市", "大東市", "東大阪市", "城陽市"]},
+"a7_1":{"n":"天理市","p":"奈良県","nb":["磯城郡", "大和郡山市", "桜井市", "生駒郡", "奈良市", "橿原市", "北葛城郡", "大和高田市", "香芝市", "生駒市", "御所市", "葛城市"]},
+"a7_2":{"n":"大和高田市","p":"奈良県","nb":["葛城市", "香芝市", "橿原市", "御所市", "磯城郡", "北葛城郡", "南河内郡", "生駒郡", "桜井市", "柏原市", "羽曳野市", "天理市"]},
+"a7_3":{"n":"大和郡山市","p":"奈良県","nb":["奈良市", "生駒郡", "天理市", "生駒市", "北葛城郡", "磯城郡", "香芝市", "大和高田市", "橿原市", "桜井市", "柏原市", "大東市"]},
+"a7_4":{"n":"橿原市","p":"奈良県","nb":["磯城郡", "大和高田市", "桜井市", "御所市", "葛城市", "香芝市", "天理市", "北葛城郡", "生駒郡", "南河内郡", "大和郡山市", "柏原市"]},
+"a7_5":{"n":"桜井市","p":"奈良県","nb":["橿原市", "磯城郡", "天理市", "大和高田市", "御所市", "香芝市", "葛城市", "生駒郡", "大和郡山市", "北葛城郡", "奈良市", "南河内郡"]},
+"a7_6":{"n":"五條市","p":"奈良県","nb":["橋本市", "御所市", "河内長野市", "葛城市", "南河内郡", "大和高田市", "富田林市", "伊都郡", "橿原市", "香芝市", "大阪狭山市", "桜井市"]},
+"a7_7":{"n":"御所市","p":"奈良県","nb":["葛城市", "大和高田市", "橿原市", "香芝市", "南河内郡", "磯城郡", "桜井市", "五條市", "富田林市", "北葛城郡", "羽曳野市", "生駒郡"]},
+"a7_8":{"n":"生駒市","p":"奈良県","nb":["大東市", "四條畷市", "大和郡山市", "奈良市", "東大阪市", "生駒郡", "北葛城郡", "交野市", "八尾市", "門真市", "寝屋川市", "守口市"]},
+"a7_9":{"n":"香芝市","p":"奈良県","nb":["大和高田市", "葛城市", "北葛城郡", "柏原市", "生駒郡", "南河内郡", "羽曳野市", "磯城郡", "橿原市", "御所市", "藤井寺市", "富田林市"]},
+"a7_10":{"n":"葛城市","p":"奈良県","nb":["大和高田市", "御所市", "香芝市", "南河内郡", "橿原市", "富田林市", "磯城郡", "羽曳野市", "北葛城郡", "柏原市", "藤井寺市", "大阪狭山市"]},
+"a7_11":{"n":"生駒郡","p":"奈良県","nb":["北葛城郡", "大和郡山市", "香芝市", "磯城郡", "生駒市", "柏原市", "天理市", "大和高田市", "奈良市", "八尾市", "羽曳野市", "橿原市"]},
+"a7_12":{"n":"磯城郡","p":"奈良県","nb":["橿原市", "桜井市", "天理市", "大和高田市", "生駒郡", "香芝市", "北葛城郡", "大和郡山市", "御所市", "葛城市", "奈良市", "柏原市"]},
+"a7_13":{"n":"北葛城郡","p":"奈良県","nb":["生駒郡", "香芝市", "柏原市", "大和高田市", "大和郡山市", "磯城郡", "羽曳野市", "藤井寺市", "八尾市", "生駒市", "葛城市", "天理市"]},
+"a8_0":{"n":"和歌山市","p":"和歌山県","nb":["海南市", "海草郡", "岩出市", "阪南市", "泉南市", "泉佐野市", "泉南郡", "貝塚市", "伊都郡", "岸和田市", "泉北郡", "和泉市"]},
+"a8_1":{"n":"橋本市","p":"和歌山県","nb":["五條市", "伊都郡", "河内長野市", "南河内郡", "富田林市", "御所市", "葛城市", "大阪狭山市", "和泉市", "泉南郡", "大和高田市", "貝塚市"]},
+"a8_2":{"n":"岩出市","p":"和歌山県","nb":["海草郡", "阪南市", "泉南市", "和歌山市", "海南市", "泉南郡", "泉佐野市", "伊都郡", "貝塚市", "岸和田市", "泉北郡", "和泉市"]},
+"a8_3":{"n":"海南市","p":"和歌山県","nb":["海草郡", "和歌山市", "岩出市", "阪南市", "泉南市", "伊都郡", "泉佐野市", "泉南郡", "貝塚市", "岸和田市"]},
+"a8_4":{"n":"海草郡","p":"和歌山県","nb":["海南市", "岩出市", "和歌山市", "阪南市", "泉南市", "伊都郡", "泉南郡", "泉佐野市", "貝塚市", "岸和田市", "橋本市", "泉北郡"]},
+"a8_5":{"n":"伊都郡","p":"和歌山県","nb":["橋本市", "河内長野市", "泉南郡", "岩出市", "五條市", "泉佐野市", "貝塚市", "岸和田市", "和泉市", "泉南市", "泉北郡", "大阪狭山市"]},
+"nagoya":{"n":"名古屋市","p":"愛知県","nb":["春日井市", "一宮市", "瀬戸市", "尾張旭市", "清須市", "北名古屋市", "岩倉市", "津島市", "あま市", "東海市", "大府市", "日進市", "長久手市", "豊明市"]},
+"a9_1":{"n":"北名古屋市","p":"愛知県","nb":["名古屋市", "一宮市", "各務原市", "日進市", "岐阜市", "豊明市", "多治見市", "みよし市", "美濃加茂市", "可児市", "大府市", "刈谷市"]},
+"a9_2":{"n":"岡崎市","p":"愛知県","nb":["知立市", "西尾市", "高浜市", "みよし市", "刈谷市", "豊明市", "大府市", "日進市", "豊川市", "豊橋市", "常滑市", "田原市"]},
+"a9_3":{"n":"みよし市","p":"愛知県","nb":["日進市", "豊明市", "知立市", "大府市", "刈谷市", "岡崎市", "高浜市", "名古屋市", "西尾市", "北名古屋市", "多治見市", "土岐市"]},
+"a9_4":{"n":"西尾市","p":"愛知県","nb":["高浜市", "岡崎市", "刈谷市", "知立市", "大府市", "常滑市", "豊明市", "みよし市", "田原市", "豊川市", "日進市", "豊橋市"]},
+"a9_5":{"n":"常滑市","p":"愛知県","nb":["高浜市", "刈谷市", "大府市", "西尾市", "豊明市", "知立市", "みよし市", "名古屋市", "岡崎市", "日進市"]},
+"a9_6":{"n":"大府市","p":"愛知県","nb":["刈谷市", "豊明市", "知立市", "高浜市", "みよし市", "日進市", "常滑市", "西尾市", "名古屋市", "岡崎市", "北名古屋市", "一宮市"]},
+"a9_7":{"n":"知立市","p":"愛知県","nb":["豊明市", "刈谷市", "大府市", "みよし市", "高浜市", "岡崎市", "日進市", "西尾市", "名古屋市", "常滑市", "北名古屋市", "豊川市"]},
+"a9_8":{"n":"高浜市","p":"愛知県","nb":["刈谷市", "大府市", "西尾市", "知立市", "豊明市", "常滑市", "岡崎市", "みよし市", "日進市", "名古屋市", "北名古屋市", "豊川市"]},
+"a9_9":{"n":"田原市","p":"愛知県","nb":["豊橋市", "豊川市", "西尾市", "岡崎市"]},
+"a9_10":{"n":"日進市","p":"愛知県","nb":["みよし市", "豊明市", "知立市", "名古屋市", "大府市", "刈谷市", "北名古屋市", "高浜市", "岡崎市", "多治見市", "土岐市", "一宮市"]},
+"a9_11":{"n":"刈谷市","p":"愛知県","nb":["大府市", "高浜市", "知立市", "豊明市", "みよし市", "西尾市", "日進市", "常滑市", "岡崎市", "名古屋市", "北名古屋市"]},
+"a9_12":{"n":"一宮市","p":"愛知県","nb":["北名古屋市", "各務原市", "岐阜市", "名古屋市", "美濃加茂市", "可児市", "美濃市", "日進市", "多治見市", "豊明市", "みよし市", "土岐市"]},
+"a9_13":{"n":"豊川市","p":"愛知県","nb":["豊橋市", "田原市", "岡崎市", "西尾市", "知立市", "高浜市"]},
+"a9_14":{"n":"豊橋市","p":"愛知県","nb":["豊川市", "田原市", "岡崎市", "西尾市"]},
+"a9_15":{"n":"豊明市","p":"愛知県","nb":["大府市", "知立市", "刈谷市", "みよし市", "日進市", "高浜市", "名古屋市", "岡崎市", "西尾市", "常滑市", "北名古屋市", "一宮市"]},
+"a10_0":{"n":"岐阜市","p":"岐阜県","nb":["各務原市", "一宮市", "美濃市", "北名古屋市", "美濃加茂市", "可児市", "名古屋市", "多治見市"]},
+"a10_1":{"n":"美濃市","p":"岐阜県","nb":["美濃加茂市", "各務原市", "岐阜市", "可児市", "一宮市", "多治見市", "土岐市", "北名古屋市", "瑞浪市"]},
+"a10_2":{"n":"瑞浪市","p":"岐阜県","nb":["土岐市", "多治見市", "恵那市", "可児市", "美濃加茂市", "中津川市", "日進市", "みよし市", "各務原市", "美濃市", "北名古屋市"]},
+"a10_3":{"n":"恵那市","p":"岐阜県","nb":["中津川市", "瑞浪市", "土岐市", "多治見市", "可児市", "美濃加茂市"]},
+"a10_4":{"n":"土岐市","p":"岐阜県","nb":["多治見市", "瑞浪市", "可児市", "美濃加茂市", "恵那市", "日進市", "各務原市", "みよし市", "北名古屋市", "中津川市", "美濃市", "名古屋市"]},
+"a10_5":{"n":"美濃加茂市","p":"岐阜県","nb":["可児市", "美濃市", "多治見市", "各務原市", "土岐市", "岐阜市", "瑞浪市", "一宮市", "北名古屋市", "名古屋市", "日進市", "恵那市"]},
+"a10_6":{"n":"各務原市","p":"岐阜県","nb":["岐阜市", "一宮市", "美濃加茂市", "美濃市", "北名古屋市", "可児市", "名古屋市", "多治見市", "土岐市", "日進市", "瑞浪市"]},
+"a10_7":{"n":"多治見市","p":"岐阜県","nb":["土岐市", "可児市", "瑞浪市", "美濃加茂市", "日進市", "北名古屋市", "各務原市", "みよし市", "名古屋市", "恵那市", "一宮市", "美濃市"]},
+"a10_8":{"n":"可児市","p":"岐阜県","nb":["美濃加茂市", "多治見市", "土岐市", "瑞浪市", "美濃市", "各務原市", "北名古屋市", "一宮市", "岐阜市", "恵那市", "名古屋市", "日進市"]},
+"a10_9":{"n":"中津川市","p":"岐阜県","nb":["恵那市", "瑞浪市", "土岐市", "多治見市", "可児市", "美濃加茂市", "美濃市"]},
+"a11_0":{"n":"北九州市","p":"福岡県","nb":["京都郡", "遠賀郡", "中間市", "行橋市", "直方市", "鞍手郡", "田川郡", "宮若市", "田川市", "築上郡", "飯塚市", "宗像市"]},
+"a11_1":{"n":"久留米市","p":"福岡県","nb":["八女郡", "小郡市", "筑後市", "三井郡", "三潴郡", "大川市", "朝倉郡", "朝倉市", "みやま市", "筑紫野市", "柳川市", "太宰府市"]},
+"a11_2":{"n":"大牟田市","p":"福岡県","nb":["みやま市", "柳川市", "三潴郡", "大川市", "筑後市", "八女郡", "久留米市"]},
+"a11_3":{"n":"筑紫野市","p":"福岡県","nb":["太宰府市", "大野城市", "春日市", "朝倉郡", "那珂川市", "小郡市", "糟屋郡", "朝倉市", "福岡市", "三井郡", "嘉穂郡", "久留米市"]},
+"a11_4":{"n":"春日市","p":"福岡県","nb":["大野城市", "太宰府市", "那珂川市", "筑紫野市", "福岡市", "糟屋郡", "朝倉郡", "小郡市", "嘉穂郡", "朝倉市", "古賀市", "三井郡"]},
+"a11_5":{"n":"福岡市","p":"福岡県","nb":["糟屋郡", "春日市", "大野城市", "那珂川市", "太宰府市", "筑紫野市", "古賀市", "糸島市", "福津市", "朝倉郡", "嘉穂郡", "小郡市"]},
+"a11_6":{"n":"飯塚市","p":"福岡県","nb":["嘉穂郡", "宮若市", "田川郡", "田川市", "直方市", "嘉麻市", "鞍手郡", "中間市", "糟屋郡", "太宰府市", "朝倉郡", "宗像市"]},
+"a11_7":{"n":"田川市","p":"福岡県","nb":["田川郡", "嘉麻市", "飯塚市", "直方市", "嘉穂郡", "宮若市", "行橋市", "鞍手郡", "中間市", "京都郡", "築上郡", "遠賀郡"]},
+"a11_8":{"n":"柳川市","p":"福岡県","nb":["大川市", "三潴郡", "みやま市", "筑後市", "大牟田市", "八女郡", "久留米市", "小郡市", "三井郡", "朝倉郡", "那珂川市", "朝倉市"]},
+"a11_9":{"n":"直方市","p":"福岡県","nb":["宮若市", "鞍手郡", "中間市", "飯塚市", "田川郡", "遠賀郡", "田川市", "宗像市", "嘉穂郡", "北九州市", "嘉麻市", "福津市"]},
+"a11_10":{"n":"豊前市","p":"福岡県","nb":["築上郡", "行橋市", "京都郡", "田川市", "田川郡", "嘉麻市"]},
+"a11_11":{"n":"筑後市","p":"福岡県","nb":["八女郡", "三潴郡", "みやま市", "柳川市", "大川市", "久留米市", "大牟田市", "小郡市", "三井郡", "うきは市", "朝倉市", "朝倉郡"]},
+"a11_12":{"n":"大川市","p":"福岡県","nb":["三潴郡", "柳川市", "みやま市", "筑後市", "八女郡", "久留米市", "大牟田市", "小郡市", "三井郡", "那珂川市", "朝倉郡", "筑紫野市"]},
+"a11_13":{"n":"行橋市","p":"福岡県","nb":["京都郡", "築上郡", "田川郡", "豊前市", "田川市", "北九州市", "直方市", "中間市", "嘉麻市", "飯塚市", "鞍手郡", "宮若市"]},
+"a11_14":{"n":"中間市","p":"福岡県","nb":["鞍手郡", "遠賀郡", "直方市", "宮若市", "宗像市", "北九州市", "飯塚市", "田川郡", "福津市", "田川市", "古賀市", "京都郡"]},
+"a11_15":{"n":"小郡市","p":"福岡県","nb":["三井郡", "朝倉郡", "久留米市", "朝倉市", "筑紫野市", "太宰府市", "春日市", "那珂川市", "大野城市", "八女郡", "うきは市", "筑後市"]},
+"a11_16":{"n":"宗像市","p":"福岡県","nb":["福津市", "古賀市", "鞍手郡", "宮若市", "遠賀郡", "中間市", "直方市", "糟屋郡", "飯塚市", "福岡市", "嘉穂郡", "田川郡"]},
+"a11_17":{"n":"古賀市","p":"福岡県","nb":["福津市", "宗像市", "糟屋郡", "福岡市", "宮若市", "鞍手郡", "大野城市", "春日市", "飯塚市", "中間市", "直方市", "太宰府市"]},
+"a11_18":{"n":"宮若市","p":"福岡県","nb":["直方市", "鞍手郡", "飯塚市", "中間市", "田川郡", "遠賀郡", "宗像市", "田川市", "嘉穂郡", "福津市", "古賀市", "嘉麻市"]},
+"a11_19":{"n":"大野城市","p":"福岡県","nb":["春日市", "太宰府市", "筑紫野市", "那珂川市", "糟屋郡", "福岡市", "朝倉郡", "小郡市", "嘉穂郡", "古賀市", "朝倉市", "三井郡"]},
+"a11_20":{"n":"太宰府市","p":"福岡県","nb":["筑紫野市", "大野城市", "春日市", "朝倉郡", "那珂川市", "糟屋郡", "小郡市", "福岡市", "嘉穂郡", "朝倉市", "三井郡", "久留米市"]},
+"a11_21":{"n":"那珂川市","p":"福岡県","nb":["春日市", "大野城市", "太宰府市", "筑紫野市", "福岡市", "糟屋郡", "小郡市", "朝倉郡", "久留米市", "糸島市", "三井郡", "朝倉市"]},
+"a11_22":{"n":"うきは市","p":"福岡県","nb":["朝倉市", "三井郡", "朝倉郡", "小郡市", "八女郡", "久留米市", "嘉麻市", "筑紫野市", "嘉穂郡", "筑後市", "太宰府市", "田川市"]},
+"a11_23":{"n":"福津市","p":"福岡県","nb":["古賀市", "宗像市", "宮若市", "糟屋郡", "鞍手郡", "中間市", "遠賀郡", "福岡市", "直方市", "飯塚市", "大野城市", "春日市"]},
+"a11_24":{"n":"嘉麻市","p":"福岡県","nb":["嘉穂郡", "田川市", "田川郡", "飯塚市", "朝倉市", "朝倉郡", "宮若市", "直方市", "うきは市", "太宰府市", "筑紫野市", "三井郡"]},
+"a11_25":{"n":"朝倉市","p":"福岡県","nb":["三井郡", "朝倉郡", "小郡市", "うきは市", "筑紫野市", "太宰府市", "嘉穂郡", "嘉麻市", "久留米市", "大野城市", "春日市", "八女郡"]},
+"a11_26":{"n":"糸島市","p":"福岡県","nb":["福岡市", "那珂川市", "春日市", "大野城市", "糟屋郡", "太宰府市", "筑紫野市", "古賀市", "福津市", "小郡市"]},
+"a11_27":{"n":"糟屋郡","p":"福岡県","nb":["福岡市", "大野城市", "春日市", "太宰府市", "古賀市", "那珂川市", "筑紫野市", "福津市", "嘉穂郡", "朝倉郡", "飯塚市", "宮若市"]},
+"a11_28":{"n":"遠賀郡","p":"福岡県","nb":["中間市", "鞍手郡", "直方市", "宮若市", "宗像市", "北九州市", "福津市", "飯塚市", "田川郡", "古賀市", "田川市", "京都郡"]},
+"a11_29":{"n":"鞍手郡","p":"福岡県","nb":["中間市", "遠賀郡", "直方市", "宮若市", "宗像市", "飯塚市", "福津市", "田川郡", "古賀市", "田川市", "北九州市", "嘉穂郡"]},
+"a11_30":{"n":"嘉穂郡","p":"福岡県","nb":["飯塚市", "嘉麻市", "田川市", "田川郡", "朝倉郡", "太宰府市", "宮若市", "筑紫野市", "朝倉市", "糟屋郡", "大野城市", "直方市"]},
+"a11_31":{"n":"朝倉郡","p":"福岡県","nb":["朝倉市", "小郡市", "筑紫野市", "太宰府市", "三井郡", "大野城市", "春日市", "嘉穂郡", "那珂川市", "久留米市", "うきは市", "嘉麻市"]},
+"a11_32":{"n":"三井郡","p":"福岡県","nb":["朝倉市", "小郡市", "朝倉郡", "うきは市", "久留米市", "八女郡", "筑紫野市", "太宰府市", "筑後市", "大野城市", "春日市", "嘉穂郡"]},
+"a11_33":{"n":"三潴郡","p":"福岡県","nb":["大川市", "柳川市", "筑後市", "みやま市", "八女郡", "久留米市", "大牟田市", "小郡市", "三井郡", "朝倉郡", "朝倉市", "那珂川市"]},
+"a11_34":{"n":"八女郡","p":"福岡県","nb":["筑後市", "久留米市", "三潴郡", "みやま市", "三井郡", "大川市", "柳川市", "小郡市", "うきは市", "朝倉市", "朝倉郡", "大牟田市"]},
+"a11_35":{"n":"田川郡","p":"福岡県","nb":["田川市", "飯塚市", "直方市", "嘉麻市", "宮若市", "嘉穂郡", "鞍手郡", "行橋市", "中間市", "京都郡", "遠賀郡", "築上郡"]},
+"a11_36":{"n":"京都郡","p":"福岡県","nb":["行橋市", "北九州市", "築上郡", "田川郡", "田川市", "豊前市", "直方市", "中間市", "遠賀郡", "鞍手郡", "宮若市", "飯塚市"]},
+"a11_37":{"n":"築上郡","p":"福岡県","nb":["豊前市", "行橋市", "京都郡", "田川市", "田川郡", "嘉麻市", "北九州市", "直方市", "飯塚市", "嘉穂郡", "宮若市", "中間市"]},
+"a11_38":{"n":"みやま市","p":"福岡県","nb":["柳川市", "筑後市", "三潴郡", "大川市", "八女郡", "大牟田市", "久留米市", "小郡市", "三井郡", "うきは市", "朝倉市", "朝倉郡"]}
+};
+  var PREFS = ["東京都","神奈川県","埼玉県","千葉県","大阪府","京都府","兵庫県","奈良県","和歌山県","愛知県","岐阜県","福岡県"];
+  var PREF_REGION = {"東京都":"関東","神奈川県":"関東","埼玉県":"関東","千葉県":"関東","大阪府":"関西","京都府":"関西","兵庫県":"関西","奈良県":"関西","和歌山県":"関西","愛知県":"東海","岐阜県":"東海","福岡県":"九州"};
+  var DEFAULT_TITLE = document.title;
+  var topPage = document.getElementById('pageTop');
+  var areaPage = document.getElementById('pageArea');
+  var navTop = document.getElementById('navTop');
+  var navKw = document.getElementById('navKawanishi');
+
+  /* トップページ「対応エリア」節に、都道府県→市区町村のリンクリストを生成 */
+  document.querySelectorAll('[data-region-links]').forEach(function(box){
+    var region = box.getAttribute('data-region-links');
+    var html = '';
+    PREFS.forEach(function(pref){
+      if (PREF_REGION[pref] !== region) return;
+      var links = '';
+      Object.keys(AREAS).forEach(function(key){
+        if (AREAS[key].p === pref) links += '<a href="#' + key + '">' + AREAS[key].n + '</a>';
+      });
+      if (links) html += '<p class="al-pref">' + pref + '</p><div class="al-list">' + links + '</div>';
+    });
+    box.innerHTML = html;
+  });
+
+  /* エリアページの地域名が入る箇所を差し替え */
+  function fillArea(a){
+    document.getElementById('areaH1').textContent = a.n + 'のエアコンクリーニング';
+    document.getElementById('areaStat').textContent = a.n + 'を中心に約60分圏内';
+    document.getElementById('areaLead').textContent = a.n + 'を中心に、車で約60分圏内のエリアへお伺いします。';
+    document.getElementById('areaBannerH').textContent = a.n + 'にお住まいの方へ';
+    document.getElementById('areaBannerP').textContent = a.n + 'を中心に、車で約60分圏内のエリアへ、お近くの現地スタッフがお伺いします。出張費込みの同一料金です。';
+    document.getElementById('areaNote').textContent = '※ 対応範囲は' + a.n + 'を中心に車で約60分圏内が目安です。圏内でも一部対応できない地域があります。詳しくはお電話でご確認ください。';
+    var chips = '<span class="center">' + a.n + '（中心）</span>';
+    a.nb.forEach(function(n){ chips += '<span>' + n + '</span>'; });
+    document.getElementById('areaChips').innerHTML = chips;
+    document.title = a.n + 'のエアコンクリーニング｜たすかるエアコンお掃除専門店';
+  }
+
+  function show(key){
+    var isArea = !!(key && AREAS[key]);
+    if (isArea) fillArea(AREAS[key]);
+    else document.title = DEFAULT_TITLE;
+    topPage.classList.toggle('hidden', isArea);
+    areaPage.classList.toggle('hidden', !isArea);
+    navTop.setAttribute('aria-current', isArea ? 'false' : 'page');
+    navKw.setAttribute('aria-current', (isArea && key === 'kawanishi') ? 'page' : 'false');
+    window.scrollTo(0, 0);
+  }
+
+  function route(){
+    var h = (location.hash || '').replace(/^#/, '');
+    show((h && AREAS[h]) ? h : null);
+  }
+
+  function go(hash){
+    if (location.hash === '#' + hash) route();
+    else location.hash = hash;
+  }
+
+  navTop.addEventListener('click', function(){ go('top'); });
+  navKw.addEventListener('click', function(){ go('kawanishi'); });
+  document.getElementById('goKawanishi').addEventListener('click', function(){ go('kawanishi'); });
+  document.getElementById('backTop').addEventListener('click', function(){ go('top'); });
+  document.getElementById('logoLink').addEventListener('click', function(e){ e.preventDefault(); go('top'); });
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>
