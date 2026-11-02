@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tasukarutaoka-cpu.github.io/tasukaru-site/sitemap.xml
