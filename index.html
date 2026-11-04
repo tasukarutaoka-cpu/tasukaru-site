@@ -848,13 +848,6 @@
   <section class="block">
     <div class="wrap">
       <div class="sec-head"><span class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>訪問エリア</span><div class="h2-row"><h2>対応エリア</h2><img class="spot-ill" src="assets/spot-area.jpg" alt="" width="480" height="480" loading="lazy"></div><div class="bar"></div><p>本部は兵庫県川西市。各エリアに現地スタッフが在籍し、お近くのスタッフが訪問します。</p></div>
-      <div class="kawanishi-banner">
-        <div>
-          <h3>川西市にお住まいの方へ</h3>
-          <p>当店の本部・川西市の専用ページです。代表の紹介や地域の情報を掲載しています。</p>
-        </div>
-        <button class="go" type="button" id="goKawanishi">川西市ページを見る →</button>
-      </div>
       <div class="area-grid">
         <div class="area-card"><h3>関東</h3><p>東京都・神奈川県・埼玉県・千葉県・茨城県・群馬県の一部</p><div class="area-links" data-region-links="関東"></div></div>
         <div class="area-card"><h3>関西</h3><p>大阪府・京都府・兵庫県の一部</p><div class="area-links" data-region-links="関西"></div></div>
@@ -1573,7 +1566,6 @@
 
   navTop.addEventListener('click', function(){ go('top'); });
   navKw.addEventListener('click', function(){ go('kawanishi'); });
-  document.getElementById('goKawanishi').addEventListener('click', function(){ go('kawanishi'); });
   document.getElementById('backTop').addEventListener('click', function(){ go('top'); });
   document.getElementById('logoLink').addEventListener('click', function(e){ e.preventDefault(); go('top'); });
   window.addEventListener('hashchange', route);
